@@ -18,9 +18,6 @@ ArrayList()
 ArrayList<E>(int initialCapacity)	
 构造具有指定初始容量的空列表。
 ```
-
-方法
-
 方法
 
 add(int index, E element): 将指定元素插入此列表中的指定位置。
