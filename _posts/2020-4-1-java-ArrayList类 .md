@@ -5,12 +5,14 @@ cover: cover.jpg
 date:   2020-4-01 14:20:00
 categories: posts
 ---
+
 # ArrayList类  
 (一个方便的Array)  
-```<E>```表示范型，即集合中的元素只能有一种类型 
+
+```<E>```
+表示范型，即集合中的元素只能有一种类型 
 
 构造器描述
-
 ```
 ArrayList()	
 构造一个初始容量为10的空列表。
@@ -18,6 +20,9 @@ ArrayList()
 ArrayList<E>(int initialCapacity)	
 构造具有指定初始容量的空列表。
 ```
+
+
+
 方法
 
 add(int index, E element): 将指定元素插入此列表中的指定位置。
