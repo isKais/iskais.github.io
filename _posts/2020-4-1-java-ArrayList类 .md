@@ -24,7 +24,11 @@ ArrayList<E>(int initialCapacity)
 方法
 
 add(int index, E element): 将指定元素插入此列表中的指定位置。
+
 boolean	add(E e): 将指定的元素追加到此列表的末尾。
+
 clear(): 从此列表中删除所有元素。
+
 isEmpty(): 如果此列表不包含任何元素，则返回 true 。
+
 remove(int index): 删除此列表中指定位置的元素。 将任何后续元素向左移位（从索引中减去一个元素）。
