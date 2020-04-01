@@ -8,10 +8,18 @@ categories: posts
 # ArrayList类  
 (一个方便的Array)  
 ```<E>```表示范型，即集合中的元素只能有一种类型 
-构造器 | 构造器描述
----|---
-ArrayList()| 构造一个初始容量为10的空列表
-ArrayList<E>(int initialCapacity)	| row 2 col 2
+
+构造器描述
+
+```
+ArrayList()	
+构造一个初始容量为10的空列表。
+
+ArrayList<E>(int initialCapacity)	
+构造具有指定初始容量的空列表。
+```
+
+方法
 
 方法
 
