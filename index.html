@@ -1,69 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- head -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>-->DragonFly!</title>
-    <style>
-        @font-face {
-            font-family: 'PixelFont';
-            src: url('fonts/fusion-pixel-12px-monospaced-zh_hans.woff2') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body {
-            font-family: 'PixelFont', sans-serif;
-        }
-    </style>
+    <title>-->DragonFly</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <!-- body -->
+
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <div class="typing">
+            <h1>Welcome To My Website</h1>
+        </div>
     </header>
-    
-    <nav>
-        <ul>
+
+
+    <div class="container">
+        <div class="leftbar">
             <!--显示在左边-->
-            <li><a href="#">主页</a></li>
-            <li><a href="#">关于</a></li>
-            <li><a href="#">内容</a></li>
+            <nav>
+                <ul>
+                    <li><a href="#">主页</a></li>
+                    <li><a href="./pages/about.html" target="_blank">关于</a></li>
+                    <li><a href="./pages/content.html" target="_blank">内容</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="rightbar">
             <!--显示在右边-->
-            <li><a href="#">⬆️</a></li>
-        </ul>
-    </nav>
-    
+            <a href="#">⬆️</a>
+        </div>
+    </div>
+
+
     <main>
         <section>
             <h2>欢迎来到我的网站</h2>
-            <p>这是一个简单的网站</p>
+            <p>这是一个简单的网站, 这是一段介绍词</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum recusandae excepturi sit officiis
+                facilis repellendus voluptatibus porro accusantium expedita dolorem quam odit cum debitis, obcaecati
+                placeat aspernatur laboriosam labore blanditiis.</p>
         </section>
 
         <section>
-            <h2>我是谁?</h2>
+            <h1>我是谁?</h1>
             <h1>About Me</h1>
-            <p>我是谁我是谁我是谁</p>
+            <p>Lorem <span class="sketchy">ipsum</span>
+                dolor sit amet consectetur adipisicing elit. Deleniti ullam velit, repudiandae sapiente
+                aliquam nostrum, esse animi, neque consectetur beatae distinctio error. Alias soluta, quasi praesentium
+                laboriosam repellat animi illum.</p>
         </section>
-        
+
         <section>
             <h2>这里是什么地方?</h2>
             <h1>where is this place?</h1>
-            <p>这是我的网站这是我的网站</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure incidunt optio consectetur, nam dolor eius,
+                deserunt sint maiores, perspiciatis libero doloribus aliquam maxime modi eaque eligendi unde! Ex, nam
+                rem.</p>
         </section>
-        
+
         <section>
             <h2>这里有什么内容?</h2>
             <h1>what's the content?</h1>
-            <p>这里有一些内容这里有一些内容</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat minus sint consequatur perferendis
+                odit dicta nobis quis excepturi rem, voluptatibus molestiae nemo beatae officia, ratione adipisci hic
+                architecto id ullam?</p>
         </section>
     </main>
-    
+
     <footer>
-        <p>2024 My Website.</p>
-        <p>May all dragons fly free.</p>
+        <p>2024 My Website - Dragonfly<br>May all dragons fly free.</p>
     </footer>
 </body>
+
+<script>
+    if (CSS["paintWorklet"] !== undefined) {
+        CSS.paintWorklet.addModule("./bundle/common.js");
+    }
+</script>
+
 </html>
