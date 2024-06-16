@@ -8,15 +8,16 @@
 body {
     font-family: 'PixelFont', sans-serif;
     background-color: #f4f4f4;
+    margin: auto;
 }
 
 header {
     background-color: #333;
     color: #f4f4f4;
-    padding: 10px 0;
+    padding: 0 0;
 }
 
-header:hover{
+header:hover {
     background-color: #f4f4f4;
     color: #333;
 }
@@ -49,7 +50,7 @@ footer {
     right: 0;
 }
 
-.typing{
+.typing {
     width: 50%;
     margin: auto;
     width: 21em;
@@ -58,10 +59,16 @@ footer {
     animation: typing 3.5s steps(21, end), blink-caret .75s step-end infinite;
     overflow: hidden;
 }
+
 /* 打印效果 */
 @keyframes typing {
-  from { width: 0; }
-  to { width: 21em; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 21em;
+    }
 }
 
 .sketchy {
