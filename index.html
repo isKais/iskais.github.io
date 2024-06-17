@@ -52,9 +52,12 @@
         <section>
             <h2>这里是什么地方?</h2>
             <h1>where is this place?</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure incidunt optio consectetur, nam dolor eius,
-                deserunt sint maiores, perspiciatis libero doloribus aliquam maxime modi eaque eligendi unde! Ex, nam
-                rem.</p>
+            <div class="boxtest">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ut nemo dolorem repudiandae eaque sed
+                    quaerat suscipit voluptates nesciunt dolore tempore, blanditiis non voluptate error ratione qui,
+                    similique tenetur! Obcaecati!</p>
+            </div>
+
         </section>
 
         <section>
@@ -73,7 +76,8 @@
 
 <script>
     if (CSS["paintWorklet"] !== undefined) {
-        CSS.paintWorklet.addModule("./bundle/common.js");
+        CSS.paintWorklet.addModule("./bundle/worklet-sketchy-background.js");
+        CSS.paintWorklet.addModule("./bundle/worklet-rough-box.js");
     }
 </script>
 

@@ -80,3 +80,11 @@ footer {
     padding: 3px 2px;
     /* display: inline-block; */
 }
+
+.boxtest {
+    --rough-stroke: rgba(247, 206, 70, 1);
+    --rough-stroke-width: 1.5px;
+    --rough-roughness: 3;
+    padding: 2.5em 3em;
+    background-image: paint(roughBox);
+}
