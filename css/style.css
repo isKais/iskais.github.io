@@ -30,6 +30,7 @@ main {
     margin-bottom: 100px;
 }
 
+/* 脚标 */
 footer {
     position: fixed;
     bottom: 0;
@@ -39,17 +40,18 @@ footer {
     color: #666;
 }
 
-.leftbar {
-    position: fixed;
-    left: 0;
-}
-
+/* 左右导航 */
 .rightbar {
     position: fixed;
     bottom: 50px;
     right: 0;
 }
 
+.leftbar {
+    position: fixed;
+}
+
+/* 打印效果 */
 .typing {
     width: 50%;
     margin: auto;
@@ -60,7 +62,6 @@ footer {
     overflow: hidden;
 }
 
-/* 打印效果 */
 @keyframes typing {
     from {
         width: 0;
@@ -71,6 +72,7 @@ footer {
     }
 }
 
+/* 更好的高亮显示 */
 .sketchy {
     background-image: paint(sketchyBackground);
     --lineWidth: 3;
