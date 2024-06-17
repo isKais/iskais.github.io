@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'PixelFont';
+    src: url('../fonts/fusion-pixel-12px-monospaced-zh_hans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #f4f4f4;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    font-family: 'PixelFont';
+    position: fixed;
+    margin-bottom: 100px;
+    font-size: 100px;
+    color: red;
+}
+
+p {
+    font-family: 'PixelFont';
+    margin-bottom: -500px;
+    position: fixed;
+    font-size: 30px;
+}
+
+.p2 {
+    color: rgba(128, 107, 211, 0);
+}
+
+.p2:hover {
+    color: #000;
+    background-color: #f4f4f4;
+}
