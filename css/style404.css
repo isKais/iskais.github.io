@@ -43,6 +43,7 @@ p {
     background-color: #f4f4f4;
 }
 
+/* 外围描边 */
 .container {
     position: absolute;
     top: 33%;
