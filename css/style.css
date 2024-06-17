@@ -81,6 +81,7 @@ footer {
     /* display: inline-block; */
 }
 
+/* 更好的边框 */
 .boxtest {
     --rough-stroke: rgba(247, 206, 70, 1);
     --rough-stroke-width: 1.5px;

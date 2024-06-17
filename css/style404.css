@@ -8,38 +8,48 @@
 body {
     background-color: #f4f4f4;
     margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-img {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-}
-
+/* 使用了absolute定位方式,相对父元素的绝对位置 */
 h1 {
+    position: absolute;
+    top: -10%;
+    left: 40%;
     font-family: 'PixelFont';
-    position: fixed;
-    margin-bottom: 100px;
     font-size: 100px;
     color: red;
+    text-shadow: 3px 3px 0px #00255f
 }
 
+/* 使用了fixed定位方式,相对浏览器的绝对位置 */
 p {
+    position: fixed;
+    top: 51%;
+    left: 31%;
     font-family: 'PixelFont';
     margin-bottom: -500px;
-    position: fixed;
     font-size: 30px;
 }
 
 .p2 {
+    position: fixed;
+    top: 51%;
+    left: 26%;
     color: rgba(128, 107, 211, 0);
 }
 
 .p2:hover {
     color: #000;
     background-color: #f4f4f4;
+}
+
+.container {
+    position: absolute;
+    top: 33%;
+    left: 28%;
+    --rough-stroke: blue;
+    --rough-stroke-width: 6px;
+    --rough-roughness: 4;
+    padding: 6em 24em;
+    background-image: paint(roughBox);
 }

@@ -9,10 +9,19 @@
 </head>
 
 <body>
-    <img src="./resource/404backgroundpic.png">
-    <h1>404</h1>
-    <p class="p1">怎么了,龙龙的美梦被弄塌了!都看光了啦(；′⌒`)!</p>
-    <p class="p2">无用的小知识: 网站的设计风格是"奇怪的像素" + "奇怪的手绘"</p>
+    <div class="container">
+        <h1>404</h1>
+
+    </div>
+    <div class="textcontainer">
+        <p class="p1">怎么了,龙龙的美梦被弄塌了!都看光了啦(；′⌒`)!</p>
+        <p class="p2">无用的小知识: 网站的设计风格是"奇怪的像素" + "奇怪的手绘"</p>
+    </div>
 </body>
+<script>
+    if (CSS["paintWorklet"] !== undefined) {
+        CSS.paintWorklet.addModule("./bundle/worklet-rough-box.js");
+    }
+</script>
 
 </html>
