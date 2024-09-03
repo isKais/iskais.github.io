@@ -1,0 +1,10 @@
+{
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "obsidian"
+  ],
+  "cssTheme": "",
+  "accentColor": "",
+  "nativeMenus": false,
+  "baseFontSize": 15
+}
