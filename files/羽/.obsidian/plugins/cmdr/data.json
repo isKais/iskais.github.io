@@ -1,0 +1,49 @@
+{
+  "confirmDeletion": false,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [
+    {
+      "id": "note-folder-autorename:make-folder-note",
+      "icon": "arrow-right-circle",
+      "name": "Note Folder Autorename: Make this note a folder note",
+      "mode": "any"
+    }
+  ],
+  "leftRibbon": [
+    {
+      "id": "cm-typewriter-scroll-obsidian:toggle-typewriter-sroll-zen",
+      "icon": "align-center",
+      "name": "专注模式",
+      "mode": "any"
+    },
+    {
+      "id": "cm-typewriter-scroll-obsidian:toggle-typewriter-sroll",
+      "icon": "airplay",
+      "name": "打字机模式",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

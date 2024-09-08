@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "b09ab6d55ff20fed",
+    "type": "split",
+    "children": [
+      {
+        "id": "b68f72908401b02c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "935aa02937c8e5e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "知识库/临时文件夹/计算机等级考试/二级Python/错题集/错题集.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2f717bbb51d6af3c",
+    "type": "split",
+    "children": [
+      {
+        "id": "4239af80b0c35b7e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21409d4ed5b65788",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "custom"
+              }
+            }
+          },
+          {
+            "id": "acc70dbdc6bb7d03",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "250322605868d98f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d567570e111a12d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "8997d055576bc4f3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "44f458badbc6d109",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "知识库/临时文件夹/计算机等级考试/二级Python/错题集/错题集.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "09da527a2cddac01",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "知识库/临时文件夹/计算机等级考试/二级Python/错题集/错题集.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "df8c94b597df07db",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e4fed0fb6bca2f08",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "知识库/临时文件夹/计算机等级考试/二级Python/错题集/错题集.md"
+              }
+            }
+          },
+          {
+            "id": "ebce2beec374aec7",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 314.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "cmdr:专注模式": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "workspaces:管理工作区布局": true,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "cmdr:打字机模式": false
+    }
+  },
+  "active": "935aa02937c8e5e1",
+  "lastOpenFiles": [
+    "知识库/临时文件夹/计算机等级考试/二级Python/错题集/错题集.md",
+    "知识库/临时文件夹/计算机等级考试/二级Python/二级Python.md",
+    "知识库/临时文件夹/计算机等级考试/计算机等级考试.md",
+    "知识库/临时文件夹/临时文件夹.md",
+    "知识库/知识库.md",
+    "知识库/临时文件夹/符号链接和硬链接.md",
+    "知识库/临时文件夹/Clash负载均衡.md",
+    "知识库/临时文件夹/Ai绘画/插件/ControlNet/ControlNet.md",
+    "知识库/临时文件夹/Ai绘画/插件/ADetailer/ADetailer.md",
+    "知识库/临时文件夹/Mc 模组备忘录.md",
+    "知识库/临时文件夹/串流备忘录.md",
+    "知识库/临时文件夹/附件/Pasted image 20240822195316.png",
+    "知识库/临时文件夹/附件/Pasted image 20240822195229.png",
+    "知识库/临时文件夹/附件/Pasted image 20240822110910.png",
+    "知识库/临时文件夹/Ai/低资源情形.md",
+    "知识库/临时文件夹/Ai/Ollama/Ollama.md",
+    "知识库/临时文件夹/Ai/模型训练流程.md",
+    "知识库/临时文件夹/Ai/Conda/Conda.md",
+    "知识库/临时文件夹/Ai/Conda",
+    "知识库/正式笔记区/语言/Python/Python库/matplotlib/安装/安装.md",
+    "知识库/临时文件夹/Ai/HuggingFace使用指南/HuggingFace使用指南.md",
+    "知识库/临时文件夹/Ai/Ollama/自定义模型/自定义模型.md",
+    "知识库/临时文件夹/Ai/Ollama/自定义模型",
+    "知识库/临时文件夹/Ai/gemma系列/gemma系列.md",
+    "知识库/临时文件夹/Ai/附件/1_Ogvtf0QGD4goI2Z_aTHF8g.webp",
+    "知识库/临时文件夹/Ai/Ai.md",
+    "知识库/临时文件夹/Ai/HuggingFace使用指南",
+    "知识库/临时文件夹/Ai/附件/Pasted image 20240821111742.png",
+    "知识库/临时文件夹/Ai/附件",
+    "知识库/正式笔记区/语言/Python/基础及语法/基础及语法.md",
+    "知识库/临时文件夹/Ai/gemma系列",
+    "知识库/临时文件夹/Ai/Ollama",
+    "知识库/临时文件夹/经济生活/经济生活.md",
+    "知识库/临时文件夹/Ai",
+    "知识库/临时文件夹/经济生活/雪球/雪球.md",
+    "知识库/临时文件夹/经济生活/雪球/附件/Pasted image 20240817184104.png",
+    "知识库/临时文件夹/经济生活/雪球/附件",
+    "知识库/临时文件夹/经济生活/雪球",
+    "知识库/临时文件夹/经济生活",
+    "知识库/临时文件夹/降压电路.md",
+    "知识库/临时文件夹/我的世界挖矿.md",
+    "知识库/正式笔记区/语言/Python/Python库/Python库.md",
+    "知识库/正式笔记区/语言/Python/Python内置函数/附件/Pasted image 20240814203842.png",
+    "知识库/临时文件夹/附件/Pasted image 20240813130806.png",
+    "知识库/临时文件夹/附件/Pasted image 20240813130753.png",
+    "知识库/临时文件夹/附件/Pasted image 20240811160359.png"
+  ]
+}
