@@ -48,3 +48,6 @@ CTRL+SHIFT+ENTER
 ## 触发代码补全/继续代码补全
 CTRL+SHIFT+SPACE
 CTRL+SPACE 也可以
+
+## 一键格式化代码
+CTRL+ALT+L

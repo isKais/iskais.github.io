@@ -4,6 +4,8 @@
 type: folder_brief_live
 ```
 新的并发编程方式, 之前为thread模块, 现在使用基于 yield 关键字的协程并发编程方法
+
+https://fastapi.tiangolo.com/async/
 ## 复习
 ### 并发
 并发: 一种单线程cpu处理多程序的方法, 通过不断的切换不同程序实现多线程功能, 注意同一时间只会处理一个

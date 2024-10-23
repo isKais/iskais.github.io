@@ -53,6 +53,9 @@ nbt(不用多说) https://www.mcmod.cn/class/4405.html
 
 自动钓鱼XPlus版 https://www.mcmod.cn/class/12673.html
 ## 增加游戏运行流畅 
+
+大力出奇迹!!!
+分辨率控制 https://www.mcmod.cn/class/5502.html
 ### 方案1 fabric
 钠 https://www.mcmod.cn/class/2785.html
 Iris Shaders https://www.mcmod.cn/class/3697.html
@@ -106,6 +109,9 @@ https://www.mcmod.cn/class/5104.html
 Yeetus Experimentus(阻止弹出实验性)
 https://www.mcmod.cn/class/11062.html
 ## 更好的游戏
+
+Diversity 更好的游戏一些合理的改动 https://modrinth.com/mod/faewufs-diversity/versions?l=fabric
+
 3D皮肤层 Skin Layers 3D https://www.mcmod.cn/class/4618.html
 
 进食动画 Eating Animation https://www.mcmod.cn/class/5854.html
@@ -132,6 +138,10 @@ Tweakeroo(连点灵魂出窍) https://www.mcmod.cn/class/2230.html
 物理声效重制版 https://www.mcmod.cn/class/8197.html
 
 动态环境/动态环绕  https://www.mcmod.cn/class/1083.html
+
+Sounds https://modrinth.com/mod/sound
+
+信标改革(此mod会导致加载卡100%) https://www.mcmod.cn/class/4342.html
 
 纸娃娃PaperDoll https://www.mcmod.cn/class/6264.html
 ## 材质包

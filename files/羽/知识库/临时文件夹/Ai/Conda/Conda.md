@@ -31,3 +31,6 @@ type: folder_brief_live
 
 `conda clean -t`
 删除保存下来的压缩文件（.tar）
+
+`conda env remove --name env_name`
+删除环境

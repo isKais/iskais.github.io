@@ -4,22 +4,59 @@
     "type": "split",
     "children": [
       {
-        "id": "b68f72908401b02c",
+        "id": "987c4cfa09ba7a92",
         "type": "tabs",
         "children": [
           {
-            "id": "935aa02937c8e5e1",
+            "id": "75e5b8a5676a140f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "知识库/临时文件夹/计算机等级考试/二级Python/错题集/错题集.md",
+                "file": "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/驱动墨水屏.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "41461bea17322285",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fb9a6b98f242b927",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "知识库/临时文件夹/工业机器人/工业机器人运动学/工业机器人运动学.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "b9ddd3887f45b01a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "知识库/正式笔记区/开发工具/Git/使用/使用.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -48,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "git",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "知识库/临时文件夹/计算机等级考试/二级Python/错题集/错题集.md",
+                "file": "知识库/正式笔记区/开发工具/Git/使用/使用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "知识库/临时文件夹/计算机等级考试/二级Python/错题集/错题集.md",
+                "file": "知识库/正式笔记区/开发工具/Git/使用/使用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "知识库/临时文件夹/计算机等级考试/二级Python/错题集/错题集.md"
+                "file": "知识库/正式笔记区/开发工具/Git/使用/使用.md"
               }
             }
           },
@@ -159,53 +196,53 @@
       "cmdr:打字机模式": false
     }
   },
-  "active": "935aa02937c8e5e1",
+  "active": "b9ddd3887f45b01a",
   "lastOpenFiles": [
-    "知识库/临时文件夹/计算机等级考试/二级Python/错题集/错题集.md",
-    "知识库/临时文件夹/计算机等级考试/二级Python/二级Python.md",
-    "知识库/临时文件夹/计算机等级考试/计算机等级考试.md",
-    "知识库/临时文件夹/临时文件夹.md",
+    "知识库/正式笔记区/开发工具/Git/命令/命令.md",
+    "知识库/正式笔记区/开发工具/Git/结构/结构.md",
     "知识库/知识库.md",
-    "知识库/临时文件夹/符号链接和硬链接.md",
-    "知识库/临时文件夹/Clash负载均衡.md",
-    "知识库/临时文件夹/Ai绘画/插件/ControlNet/ControlNet.md",
-    "知识库/临时文件夹/Ai绘画/插件/ADetailer/ADetailer.md",
-    "知识库/临时文件夹/Mc 模组备忘录.md",
-    "知识库/临时文件夹/串流备忘录.md",
-    "知识库/临时文件夹/附件/Pasted image 20240822195316.png",
-    "知识库/临时文件夹/附件/Pasted image 20240822195229.png",
-    "知识库/临时文件夹/附件/Pasted image 20240822110910.png",
-    "知识库/临时文件夹/Ai/低资源情形.md",
-    "知识库/临时文件夹/Ai/Ollama/Ollama.md",
-    "知识库/临时文件夹/Ai/模型训练流程.md",
-    "知识库/临时文件夹/Ai/Conda/Conda.md",
-    "知识库/临时文件夹/Ai/Conda",
-    "知识库/正式笔记区/语言/Python/Python库/matplotlib/安装/安装.md",
-    "知识库/临时文件夹/Ai/HuggingFace使用指南/HuggingFace使用指南.md",
-    "知识库/临时文件夹/Ai/Ollama/自定义模型/自定义模型.md",
-    "知识库/临时文件夹/Ai/Ollama/自定义模型",
-    "知识库/临时文件夹/Ai/gemma系列/gemma系列.md",
-    "知识库/临时文件夹/Ai/附件/1_Ogvtf0QGD4goI2Z_aTHF8g.webp",
-    "知识库/临时文件夹/Ai/Ai.md",
-    "知识库/临时文件夹/Ai/HuggingFace使用指南",
-    "知识库/临时文件夹/Ai/附件/Pasted image 20240821111742.png",
-    "知识库/临时文件夹/Ai/附件",
-    "知识库/正式笔记区/语言/Python/基础及语法/基础及语法.md",
-    "知识库/临时文件夹/Ai/gemma系列",
-    "知识库/临时文件夹/Ai/Ollama",
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/驱动墨水屏.md",
+    "知识库/临时文件夹/计算机等级考试/计算机等级考试.md",
+    "知识库/临时文件夹/计算机等级考试/二级Python/二级Python.md",
     "知识库/临时文件夹/经济生活/经济生活.md",
-    "知识库/临时文件夹/Ai",
-    "知识库/临时文件夹/经济生活/雪球/雪球.md",
-    "知识库/临时文件夹/经济生活/雪球/附件/Pasted image 20240817184104.png",
-    "知识库/临时文件夹/经济生活/雪球/附件",
-    "知识库/临时文件夹/经济生活/雪球",
-    "知识库/临时文件夹/经济生活",
-    "知识库/临时文件夹/降压电路.md",
-    "知识库/临时文件夹/我的世界挖矿.md",
-    "知识库/正式笔记区/语言/Python/Python库/Python库.md",
-    "知识库/正式笔记区/语言/Python/Python内置函数/附件/Pasted image 20240814203842.png",
-    "知识库/临时文件夹/附件/Pasted image 20240813130806.png",
-    "知识库/临时文件夹/附件/Pasted image 20240813130753.png",
-    "知识库/临时文件夹/附件/Pasted image 20240811160359.png"
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/2.6寸老王墨水屏/2.6寸老王墨水屏.md",
+    "知识库/正式笔记区/实践/嵌入式/嵌入式.md",
+    "知识库/临时文件夹/工业机器人/工业机器人运动学/工业机器人运动学.md",
+    "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md",
+    "知识库/临时文件夹/工业机器人/工业机器人.md",
+    "知识库/临时文件夹/工业机器人/工业机器人运动学",
+    "知识库/临时文件夹/临时文件夹.md",
+    "知识库/临时文件夹/工业机器人",
+    "知识库/正式笔记区/基础知识/基础知识.md",
+    "知识库/正式笔记区/实践/嵌入式/附件/Pasted image 20241014203438.png",
+    "知识库/正式笔记区/实践/嵌入式/附件",
+    "知识库/正式笔记区/语言/Python/Python库/tutorial/tutorial.md",
+    "知识库/正式笔记区/语言/Python/更高级语法/async和await/async和await.md",
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20241006205044.png",
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/2.6寸老王墨水屏",
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928172707.png",
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928001506.png",
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928000554.png",
+    "知识库/正式笔记区/开发工具/PlatformIO/PlatformIO.md",
+    "知识库/临时文件夹/自定义火狐浏览器.md",
+    "知识库/正式笔记区/开发工具/PlatformIO/附件/Pasted image 20240927120925.png",
+    "知识库/正式笔记区/开发工具/PlatformIO/附件",
+    "知识库/正式笔记区/开发工具/PlatformIO/Arduino/Arduino.md",
+    "知识库/正式笔记区/开发工具/PlatformIO/Arduino/附件/Pasted image 20240927115409.png",
+    "知识库/正式笔记区/开发工具/PlatformIO/Arduino/附件/Pasted image 20240927115247.png",
+    "知识库/正式笔记区/开发工具/PlatformIO/Arduino/附件",
+    "知识库/正式笔记区/开发工具/PlatformIO/Arduino",
+    "知识库/正式笔记区/开发工具/PlatformIO/Nordic/Nordic.md",
+    "知识库/正式笔记区/开发工具/PlatformIO/未命名.md",
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240924010918.png",
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240924002127.png",
+    "知识库/正式笔记区/语言/Cpp/基础/基础.md",
+    "知识库/正式笔记区/语言/Cpp/Cpp.md",
+    "知识库/正式笔记区/语言/Cpp/配置/配置.md",
+    "知识库/正式笔记区/语言/语言.md",
+    "知识库/正式笔记区/实践/实践.md",
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件",
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏",
+    "知识库/正式笔记区/开发工具/PlatformIO/Nordic/附件"
   ]
 }
