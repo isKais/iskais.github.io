@@ -32,24 +32,24 @@
             }
           },
           {
-            "id": "fb9a6b98f242b927",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "知识库/临时文件夹/工业机器人/工业机器人运动学/工业机器人运动学.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "b9ddd3887f45b01a",
+            "id": "367b9758ab506ce3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "知识库/正式笔记区/开发工具/Git/使用/使用.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2ea65859662b28f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "知识库/正式笔记区/开发工具/Github使用指南/Github使用指南.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "git",
+                "query": "ssh",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -106,7 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 210.5
   },
   "right": {
     "id": "d567570e111a12d4",
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "知识库/正式笔记区/开发工具/Git/使用/使用.md",
+                "file": "知识库/正式笔记区/开发工具/Github使用指南/Github使用指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "知识库/正式笔记区/开发工具/Git/使用/使用.md",
+                "file": "知识库/正式笔记区/开发工具/Github使用指南/Github使用指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "知识库/正式笔记区/开发工具/Git/使用/使用.md"
+                "file": "知识库/正式笔记区/开发工具/Github使用指南/Github使用指南.md"
               }
             }
           },
@@ -179,11 +179,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 314.5
+    "width": 314.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "cmdr:专注模式": false,
       "markdown-importer:打开 Markdown 格式转换器": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
@@ -193,13 +193,31 @@
       "command-palette:打开命令面板": false,
       "workspaces:管理工作区布局": true,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "cmdr:专注模式": false,
       "cmdr:打字机模式": false
     }
   },
-  "active": "b9ddd3887f45b01a",
+  "active": "2ea65859662b28f9",
   "lastOpenFiles": [
+    "新建文件夹",
+    "知识库/正式笔记区/开发工具/Git/使用/使用.md",
+    "知识库/正式笔记区/开发工具/Github使用指南/Github使用指南.md",
+    "知识库/正式笔记区/开发工具/Git/Git.md",
+    "知识库/正式笔记区/开发工具/Github使用指南",
+    "知识库/正式笔记区/开发工具/Git/删库/删库.md",
+    "知识库/正式笔记区/开发工具/Git/配置/配置.md",
     "知识库/正式笔记区/开发工具/Git/命令/命令.md",
     "知识库/正式笔记区/开发工具/Git/结构/结构.md",
+    "知识库/正式笔记区/开发工具/Git/搭建/搭建.md",
+    "知识库/正式笔记区/开发工具/Git/报错和维修/报错和维修.md",
+    "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md",
+    "知识库/临时文件夹/工业机器人/工业机器人运动学/工业机器人运动学.md",
+    "知识库/临时文件夹/Linux/Linux.md",
+    "Gitee和Github双向同步.md",
+    "知识库/正式笔记区/正式笔记区.md",
+    "任务栈.md",
+    "知识库/临时文件夹/Linux",
+    "需要掌握.md",
     "知识库/知识库.md",
     "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/驱动墨水屏.md",
     "知识库/临时文件夹/计算机等级考试/计算机等级考试.md",
@@ -207,42 +225,25 @@
     "知识库/临时文件夹/经济生活/经济生活.md",
     "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/2.6寸老王墨水屏/2.6寸老王墨水屏.md",
     "知识库/正式笔记区/实践/嵌入式/嵌入式.md",
-    "知识库/临时文件夹/工业机器人/工业机器人运动学/工业机器人运动学.md",
-    "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md",
     "知识库/临时文件夹/工业机器人/工业机器人.md",
     "知识库/临时文件夹/工业机器人/工业机器人运动学",
     "知识库/临时文件夹/临时文件夹.md",
     "知识库/临时文件夹/工业机器人",
-    "知识库/正式笔记区/基础知识/基础知识.md",
     "知识库/正式笔记区/实践/嵌入式/附件/Pasted image 20241014203438.png",
     "知识库/正式笔记区/实践/嵌入式/附件",
-    "知识库/正式笔记区/语言/Python/Python库/tutorial/tutorial.md",
-    "知识库/正式笔记区/语言/Python/更高级语法/async和await/async和await.md",
     "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20241006205044.png",
     "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/2.6寸老王墨水屏",
     "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928172707.png",
     "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928001506.png",
     "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928000554.png",
-    "知识库/正式笔记区/开发工具/PlatformIO/PlatformIO.md",
-    "知识库/临时文件夹/自定义火狐浏览器.md",
     "知识库/正式笔记区/开发工具/PlatformIO/附件/Pasted image 20240927120925.png",
     "知识库/正式笔记区/开发工具/PlatformIO/附件",
-    "知识库/正式笔记区/开发工具/PlatformIO/Arduino/Arduino.md",
     "知识库/正式笔记区/开发工具/PlatformIO/Arduino/附件/Pasted image 20240927115409.png",
     "知识库/正式笔记区/开发工具/PlatformIO/Arduino/附件/Pasted image 20240927115247.png",
     "知识库/正式笔记区/开发工具/PlatformIO/Arduino/附件",
     "知识库/正式笔记区/开发工具/PlatformIO/Arduino",
-    "知识库/正式笔记区/开发工具/PlatformIO/Nordic/Nordic.md",
-    "知识库/正式笔记区/开发工具/PlatformIO/未命名.md",
     "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240924010918.png",
     "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240924002127.png",
-    "知识库/正式笔记区/语言/Cpp/基础/基础.md",
-    "知识库/正式笔记区/语言/Cpp/Cpp.md",
-    "知识库/正式笔记区/语言/Cpp/配置/配置.md",
-    "知识库/正式笔记区/语言/语言.md",
-    "知识库/正式笔记区/实践/实践.md",
-    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件",
-    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏",
-    "知识库/正式笔记区/开发工具/PlatformIO/Nordic/附件"
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件"
   ]
 }
