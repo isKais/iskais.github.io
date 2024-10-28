@@ -1,150 +1,91 @@
 {
   "main": {
-    "id": "b09ab6d55ff20fed",
+    "id": "61b1630b2499f990",
     "type": "split",
     "children": [
       {
-        "id": "987c4cfa09ba7a92",
+        "id": "fa81e0ee80e2c0d5",
         "type": "tabs",
         "children": [
           {
-            "id": "75e5b8a5676a140f",
+            "id": "42c08e28bf51ea4b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/驱动墨水屏.md",
+                "file": "知识库/临时文件夹/Linux/Linux.md",
                 "mode": "source",
                 "source": false
-              },
-              "icon": "lucide-file",
-              "title": "驱动墨水屏"
-            }
-          },
-          {
-            "id": "41461bea17322285",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md",
-                "mode": "source",
-                "source": false
-<<<<<<< HEAD
               }
-=======
-              },
-              "icon": "lucide-file",
-              "title": "Jetbrain技巧"
-            }
-          },
-          {
-            "id": "2ea65859662b28f9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "知识库/临时文件夹/Linux/ArchLinux/安装软件/安装软件.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "安装软件"
-            }
-          },
-          {
-            "id": "ce1f823ce55dfde3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "知识库/临时文件夹/Linux/ArchLinux/前言/前言.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "前言"
->>>>>>> 038d8b86e2807071f2ae2ddab52412affad74d63
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "2f717bbb51d6af3c",
+    "id": "bf8cd2bc8f491346",
     "type": "split",
     "children": [
       {
-        "id": "4239af80b0c35b7e",
+        "id": "9626ed1d38aa8fde",
         "type": "tabs",
         "children": [
           {
-            "id": "21409d4ed5b65788",
+            "id": "33581bdf94cc31a5",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "custom"
-              },
-              "icon": "lucide-folder-closed",
-              "title": "文件列表"
+                "sortOrder": "alphabetical"
+              }
             }
           },
           {
-            "id": "acc70dbdc6bb7d03",
+            "id": "65e7e43491ab652f",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "ssh",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "搜索"
+              }
             }
           },
           {
-            "id": "250322605868d98f",
+            "id": "bb8bda0182be6447",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "书签"
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 210.5
+    "width": 300
   },
   "right": {
-    "id": "d567570e111a12d4",
+    "id": "ab7dd00dc66787ce",
     "type": "split",
     "children": [
       {
-        "id": "8997d055576bc4f3",
+        "id": "631a0c87ff607301",
         "type": "tabs",
         "children": [
           {
-            "id": "44f458badbc6d109",
+            "id": "1c2e6d2e5d76574f",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-<<<<<<< HEAD
-                "file": "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md",
-=======
-                "file": "知识库/临时文件夹/Linux/ArchLinux/前言/前言.md",
->>>>>>> 038d8b86e2807071f2ae2ddab52412affad74d63
+                "file": "知识库/临时文件夹/Linux/Linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,158 +93,68 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "前言 的反向链接列表"
+              }
             }
           },
           {
-            "id": "09da527a2cddac01",
+            "id": "ecc08abc087c3454",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-<<<<<<< HEAD
-                "file": "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md",
-=======
-                "file": "知识库/临时文件夹/Linux/ArchLinux/前言/前言.md",
->>>>>>> 038d8b86e2807071f2ae2ddab52412affad74d63
+                "file": "知识库/临时文件夹/Linux/Linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "前言 的出链列表"
+              }
             }
           },
           {
-            "id": "df8c94b597df07db",
+            "id": "47e681bcc1af844e",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              },
-              "icon": "lucide-tags",
-              "title": "标签"
+              }
             }
           },
           {
-            "id": "e4fed0fb6bca2f08",
+            "id": "889e23c8e4c8bbfb",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-<<<<<<< HEAD
-                "file": "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md"
+                "file": "知识库/临时文件夹/Linux/Linux.md"
               }
-=======
-                "file": "知识库/临时文件夹/Linux/ArchLinux/前言/前言.md"
-              },
-              "icon": "lucide-list",
-              "title": "前言 的大纲"
->>>>>>> 038d8b86e2807071f2ae2ddab52412affad74d63
-            }
-          },
-          {
-            "id": "ebce2beec374aec7",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 314.5,
+    "width": 300,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "markdown-importer:打开 Markdown 格式转换器": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "cmdr:专注模式": false,
+      "cmdr:打字机模式": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "workspaces:管理工作区布局": true,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "cmdr:专注模式": false,
-      "cmdr:打字机模式": false
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "workspaces:管理工作区布局": false
     }
   },
-<<<<<<< HEAD
-  "active": "41461bea17322285",
+  "active": "42c08e28bf51ea4b",
   "lastOpenFiles": [
-    "知识库/临时文件夹/Linux/Linux.md",
-    "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md",
-    "知识库/临时文件夹/Gitee和Github双向同步.md",
-    "知识库/临时文件夹/附件/Pasted image 20241026223211.png",
-    "知识库/正式笔记区/开发工具/Git/使用/使用.md",
-    "任务栈.md",
-    "需要掌握.md",
-    "知识库/正式笔记区/开发工具/Github使用指南/Github使用指南.md",
-=======
-  "active": "ce1f823ce55dfde3",
-  "lastOpenFiles": [
-    "知识库/临时文件夹/Linux/ArchLinux/安装软件/安装软件.md",
-    "知识库/临时文件夹/Linux/Linux.md",
-    "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md",
-    "知识库/正式笔记区/开发工具/Git/使用/使用.md",
-    "知识库/临时文件夹/Linux/ArchLinux/ArchLinux.md",
-    "知识库/临时文件夹/Linux/ArchLinux/安装软件",
     "知识库/临时文件夹/Linux/ArchLinux/前言/前言.md",
-    "知识库/临时文件夹/QT/QT.md",
-    "知识库/临时文件夹/Linux/ArchLinux/前言/附件/Pasted image 20241026225028.png",
-    "知识库/临时文件夹/Linux/ArchLinux/前言/附件",
-    "知识库/临时文件夹/Linux/ArchLinux/前言",
-    "知识库/临时文件夹/Linux/ArchLinux",
-    "知识库/正式笔记区/开发工具/Github使用指南/Github使用指南.md",
-    "知识库/临时文件夹/未命名",
->>>>>>> 038d8b86e2807071f2ae2ddab52412affad74d63
-    "新建文件夹",
-    "知识库/正式笔记区/开发工具/Git/Git.md",
-    "知识库/正式笔记区/开发工具/Github使用指南",
-    "知识库/正式笔记区/开发工具/Git/删库/删库.md",
-    "知识库/正式笔记区/开发工具/Git/配置/配置.md",
-    "知识库/正式笔记区/开发工具/Git/命令/命令.md",
-    "知识库/正式笔记区/开发工具/Git/结构/结构.md",
-    "知识库/正式笔记区/开发工具/Git/搭建/搭建.md",
-    "知识库/正式笔记区/开发工具/Git/报错和维修/报错和维修.md",
-    "知识库/临时文件夹/工业机器人/工业机器人运动学/工业机器人运动学.md",
-<<<<<<< HEAD
-=======
-    "Gitee和Github双向同步.md",
->>>>>>> 038d8b86e2807071f2ae2ddab52412affad74d63
-    "知识库/正式笔记区/正式笔记区.md",
-    "知识库/临时文件夹/Linux",
-    "知识库/知识库.md",
-    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/驱动墨水屏.md",
-    "知识库/临时文件夹/计算机等级考试/计算机等级考试.md",
-    "知识库/临时文件夹/计算机等级考试/二级Python/二级Python.md",
-    "知识库/临时文件夹/经济生活/经济生活.md",
-    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/2.6寸老王墨水屏/2.6寸老王墨水屏.md",
-    "知识库/临时文件夹/工业机器人/工业机器人运动学",
-    "知识库/临时文件夹/工业机器人",
-    "知识库/正式笔记区/实践/嵌入式/附件/Pasted image 20241014203438.png",
-    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20241006205044.png",
-    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928172707.png",
-    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928001506.png",
-    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928000554.png",
-    "知识库/正式笔记区/开发工具/PlatformIO/附件/Pasted image 20240927120925.png",
-    "知识库/正式笔记区/开发工具/PlatformIO/Arduino/附件/Pasted image 20240927115409.png",
-    "知识库/正式笔记区/开发工具/PlatformIO/Arduino/附件/Pasted image 20240927115247.png",
-<<<<<<< HEAD
-    "知识库/正式笔记区/开发工具/PlatformIO/Arduino/附件",
-    "知识库/正式笔记区/开发工具/PlatformIO/Arduino",
-=======
->>>>>>> 038d8b86e2807071f2ae2ddab52412affad74d63
-    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240924010918.png"
+    "知识库/临时文件夹/Linux/ArchLinux/安装软件/安装软件.md",
+    "知识库/临时文件夹/Linux/ArchLinux/ArchLinux.md"
   ]
 }
