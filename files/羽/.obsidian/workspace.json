@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "987c4cfa09ba7a92",
+        "id": "fd11a811779b87e5",
         "type": "tabs",
         "children": [
           {
-            "id": "41461bea17322285",
+            "id": "d5c3ede2d10a10d7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md",
+                "file": "知识库/临时文件夹/Linux/LinuxShell/进阶命令/进阶命令.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Jetbrain技巧"
-            }
-          },
-          {
-            "id": "ce1f823ce55dfde3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "知识库/临时文件夹/Linux/ArchLinux/前言/前言.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "前言"
+              "title": "进阶命令"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -67,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ssh",
+                "query": "链接",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -154,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "知识库/临时文件夹/Linux/ArchLinux/前言/前言.md"
+                "file": "知识库/临时文件夹/Linux/LinuxShell/进阶命令/进阶命令.md"
               },
               "icon": "lucide-list",
-              "title": "前言 的大纲"
+              "title": "进阶命令 的大纲"
             }
           },
           {
@@ -192,14 +177,30 @@
       "cmdr:打字机模式": false
     }
   },
-  "active": "ce1f823ce55dfde3",
+  "active": "d5c3ede2d10a10d7",
   "lastOpenFiles": [
-    "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md",
-    "知识库/临时文件夹/Linux/ArchLinux/安装软件/安装软件.md",
+    "知识库/临时文件夹/Linux/LinuxShell/LinuxShell.md",
+    "知识库/临时文件夹/Linux/LinuxShell/未命名",
+    "知识库/临时文件夹/Linux/LinuxShell/进阶命令/进阶命令.md",
+    "知识库/临时文件夹/Linux/LinuxShell/进阶命令",
+    "知识库/临时文件夹/Linux/Linux.md",
     "知识库/临时文件夹/Linux/ArchLinux/前言/前言.md",
+    "知识库/临时文件夹/Linux/vim/vim.md",
+    "知识库/临时文件夹/Linux/ArchLinux/调整系统/调整系统.md",
+    "知识库/临时文件夹/Linux/ArchLinux/安装软件/安装软件.md",
+    "知识库/临时文件夹/符号链接和硬链接.md",
+    "知识库/临时文件夹/Linux/vim/附件/Pasted image 20241101123453.png",
+    "知识库/临时文件夹/Linux/vim/附件/Pasted image 20241101122759.png",
+    "知识库/临时文件夹/Linux/vim/附件/Pasted image 20241101122537.png",
+    "知识库/临时文件夹/Linux/vim/附件",
+    "知识库/临时文件夹/Linux/vim/美化/美化.md",
+    "知识库/临时文件夹/Linux/vim/美化",
+    "知识库/临时文件夹/Linux/LinuxShell",
+    "知识库/临时文件夹/Linux/vim",
+    "知识库/临时文件夹/Linux/ArchLinux/调整系统",
+    "知识库/正式笔记区/开发工具/Jetbrain技巧/Jetbrain技巧.md",
     "知识库/临时文件夹/Linux/ArchLinux/前言/附件/Pasted image 20241028214850.png",
     "知识库/临时文件夹/Linux/ArchLinux/前言/附件/Pasted image 20241027004252.png",
-    "知识库/临时文件夹/Linux/Linux.md",
     "知识库/正式笔记区/开发工具/Git/使用/使用.md",
     "知识库/临时文件夹/Linux/ArchLinux/ArchLinux.md",
     "知识库/临时文件夹/Linux/ArchLinux/安装软件",
@@ -207,12 +208,8 @@
     "知识库/临时文件夹/Linux/ArchLinux/前言/附件/Pasted image 20241026225028.png",
     "知识库/临时文件夹/Linux/ArchLinux/前言/附件",
     "知识库/临时文件夹/Linux/ArchLinux/前言",
-    "知识库/临时文件夹/Linux/ArchLinux",
     "知识库/正式笔记区/开发工具/Github使用指南/Github使用指南.md",
-    "知识库/临时文件夹/未命名",
-    "新建文件夹",
     "知识库/正式笔记区/开发工具/Git/Git.md",
-    "知识库/正式笔记区/开发工具/Github使用指南",
     "知识库/正式笔记区/开发工具/Git/删库/删库.md",
     "知识库/正式笔记区/开发工具/Git/配置/配置.md",
     "知识库/正式笔记区/开发工具/Git/命令/命令.md",
@@ -223,21 +220,9 @@
     "Gitee和Github双向同步.md",
     "知识库/正式笔记区/正式笔记区.md",
     "任务栈.md",
-    "知识库/临时文件夹/Linux",
-    "需要掌握.md",
-    "知识库/知识库.md",
-    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/驱动墨水屏.md",
-    "知识库/临时文件夹/计算机等级考试/计算机等级考试.md",
-    "知识库/临时文件夹/计算机等级考试/二级Python/二级Python.md",
-    "知识库/临时文件夹/经济生活/经济生活.md",
-    "知识库/临时文件夹/工业机器人/工业机器人运动学",
-    "知识库/临时文件夹/工业机器人",
     "知识库/正式笔记区/实践/嵌入式/附件/Pasted image 20241014203438.png",
     "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20241006205044.png",
     "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928172707.png",
-    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928001506.png",
-    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928000554.png",
-    "知识库/正式笔记区/开发工具/PlatformIO/附件/Pasted image 20240927120925.png",
-    "知识库/正式笔记区/开发工具/PlatformIO/Arduino/附件/Pasted image 20240927115409.png"
+    "知识库/正式笔记区/实践/嵌入式/驱动墨水屏/附件/Pasted image 20240928001506.png"
   ]
 }
