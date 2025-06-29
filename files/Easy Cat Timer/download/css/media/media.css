@@ -1,0 +1,152 @@
+/* 如果屏幕宽度小于等于849px */
+@media screen and (max-width:849px){
+
+    /* 上方 */
+    #main .top{
+        /* 大小 */
+        height: auto;
+
+        /* flex布局（父元素） */
+        flex-direction: column;
+    }
+    /* 猫咪 */
+    #main .top .cat{
+        /* 大小 */
+        width: 302px;
+        height: 344px;
+
+        /* 居中 */
+        top: 17px;
+        left: 50%;
+        margin-left: -151px;
+    }
+    /* 其他 */
+    #main .top .other{
+        /* 大小 */
+        width: 473px;
+        height: 360px;
+    }
+
+
+
+    /* 下方 */
+    /* 其他的下载地址 */
+    #main .bottom .alsoInHere{
+        /* 位置 */
+        margin-left: 20px;
+    }
+    /* 源代码 */
+    #main .bottom .sourceCode{
+        /* 位置 */
+        margin-left: 100px;
+    }
+
+}
+
+
+/* 如果屏幕宽度小于等于599px */
+@media screen and (max-width:599px){
+
+    /* 菜单栏 */
+    /* 按钮:下载 */
+    #menu .buttons .download{
+        /* 大小 */
+        width: 0px;
+
+        /* 隐藏 */
+        visibility: hidden;
+    }
+
+    /* 上方的其他东西 */
+    #main .top .other {
+        width: 95%;
+    }
+
+}
+
+
+/* 如果屏幕宽度小于等于510px */
+@media screen and (max-width:510px){
+
+    /* 第2个标题 */
+    #main .top .other .title2{
+        /* 字体 */
+        font-size: 32px;
+    }
+
+}
+
+
+/* 如果屏幕宽度小于等于419px */
+@media screen and (max-width:419px){
+
+    /* 第2个标题 */
+    #main .top .other .title2{
+        /* 字体 */
+        font-size: 23px;
+    }
+
+    /* 内容的文字 */
+    #main .top .other .text {
+        font-size: 14px;
+    }
+
+    /* 按钮：这是什么 */
+    #menu .buttons .whatIsIt {
+        /*隐藏 (flex元素)*/
+        visibility: hidden;
+        width: 0px;
+        padding: 0px 0px;
+    }
+
+    /* 下方 */
+    #main .bottom {
+        flex-direction: column;
+    }
+
+    /* 源代码 */
+    #main .bottom .sourceCode {
+        margin-left: 20px;
+        margin-top: 80px;
+        margin-bottom: 60px;
+    }
+
+    /* 上方 */
+    #main {
+        top: 115px;
+    }
+
+    /* 上方的其他东西 */
+    #main .top .other {
+        margin-top: -76px;
+    }
+}
+
+
+/* 如果屏幕宽度小于等于380px */
+@media screen and (max-width:380px){
+    /* 上方的其他东西 */
+    #main .top .other {
+        margin-top: -163px;
+    }
+}
+
+
+/* 如果屏幕宽度小于等于360px */
+@media screen and (max-width:360px){
+    /* 猫咪图片 */
+    #main .top .cat {
+        width: 241px;
+        height: 275px;
+    }
+
+    /* 上方 */
+    #main {
+        top: 108px;
+    }
+
+    /* 上方的其他东西 */
+    #main .top .other {
+        margin-top: -171px;
+    }
+}
