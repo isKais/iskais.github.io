@@ -1,3 +1,4 @@
+// import NoSleep from 'nosleep.js';
 /* 计时器的[定时 界面] */
 class TimingUi {
     /* 构造函数 */
@@ -303,6 +304,14 @@ class TimingUi {
     //当鼠标点击[开始]按钮时
     OnClickStartButton() {
         // 修改备注: 增加了正计时功能 修改函数: OnClickStartButton TimerOnTick() 以及class Datas{}
+        // 修改备注2: 增加防息屏功能(在Run和Pause过程中防息屏, None和stop时可以息屏)
+        // 初始化nosleep
+        var noSleep = new NoSleep();
+        document.addEventListener('click', function enableNoSleep() {
+            document.removeEventListener('click', enableNoSleep, false);
+            noSleep.enable();
+        }, false);
+
         // 输入时间
         TimerApp.Datas.currentTime.ChangeMinute(TimerApp.Datas.inputTime.minute);
         TimerApp.Datas.currentTime.ChangeSeconds(TimerApp.Datas.inputTime.seconds);

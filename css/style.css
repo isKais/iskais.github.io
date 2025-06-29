@@ -90,7 +90,9 @@ footer {
     background-image: paint(roughBox);
 }
 
-/* 更新框 */
+
+
+/* 以下均为更新用的框 */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -104,7 +106,6 @@ footer {
     z-index: 1000;
 }
 
-/* 更好的边框 */
 .modal-box {
     --rough-stroke: rgba(247, 206, 70, 1);
     --rough-stroke-width: 1.5px;
