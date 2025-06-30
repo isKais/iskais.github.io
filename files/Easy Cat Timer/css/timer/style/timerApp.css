@@ -1,8 +1,21 @@
 /* [计时器] */
 
+.decoration-image {
+    position: relative;
+    width: 0px;
+}
+
+.decoration-image img {
+    position: absolute;
+    height: 170%;
+    aspect-ratio: 1/1;
+    top: -61%;
+    transform: translateX(-44%);
+    object-fit: contain;
+}
 
 /*计时器的盒子*/
-#timerApp{
+#timerApp {
 
     /*大小*/
     width: 394px;
@@ -17,7 +30,7 @@
     top: 38px;
 
     /*阴影*/
-    box-shadow: 0px 0px 20px 0px rgba(91, 91, 91, 0.25) ;
+    box-shadow: 0px 0px 20px 0px rgba(91, 91, 91, 0.25);
 
     /*颜色*/
     background-color: transparent;
@@ -29,11 +42,11 @@
     /* flex布局（子元素） */
     flex-grow: 0;
     flex-shrink: 0;
-    
+
 }
 
 /*界面 的盒子*/
-#timerApp .ui{
+#timerApp .ui {
 
     /*大小*/
     width: 394px;
@@ -48,7 +61,7 @@
 }
 
 /* 界面的 所有元素 */
-#timerApp *{
+#timerApp * {
     /*定位*/
     position: absolute;
 }
