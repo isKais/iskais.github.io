@@ -7,21 +7,6 @@
 }
 
 
-.decoration-image {
-    position: relative;
-    width: 0px;
-}
-
-.decoration-image img {
-    position: absolute;
-    height: 170%;
-    aspect-ratio: 1/1;
-    top: -61%;
-    transform: translateX(-44%);
-    object-fit: contain;
-}
-
-
 /*背景*/
 /*背景：灰色*/
 #timingUi .background .gray {

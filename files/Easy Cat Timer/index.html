@@ -86,6 +86,22 @@
         <div class="decoration-image">
             <img src="asset/image/other/dragon.png" alt="Timer Decoration">
         </div>
+        <style>
+            /*我额外增加的装饰物*/
+            .decoration-image {
+                position: relative;
+                width: 0px;
+            }
+
+            .decoration-image img {
+                position: absolute;
+                height: 170%;
+                aspect-ratio: 1/1;
+                top: -61%;
+                transform: translateX(-44%);
+                object-fit: contain;
+            }
+        </style>
 
         <!-- 计时器 -->
         <div id="timerApp">
