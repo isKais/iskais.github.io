@@ -47,31 +47,6 @@ registerPaint('sketchyBackground', class {
 
         // // 从起点到终点绘制条纹 - 原始示例来自 Una Kravets
         // // 来自 https://blog.logrocket.com/new-horizons-in-css-houdini-and-the-paint-api-8b307cf387bb
-        // const getRandom = () => { return Math.round(Math.random() * size.width * 0.2) }
-        // let x_old = getRandom()
-        // let y_old = size.height * (Math.random()*spread + 0.2)
-        // ctx.beginPath()
-        // ctx.moveTo(x_old, y_old)
-        // for (let i = 0; i < numUnderlines; i++) {
-        //     let x = i % 2 === 0 ? size.width - getRandom() : getRandom()
-        //     let y = size.height * (Math.random()*spread + 0.2)
 
-        //     // ctx.beginPath()
-        //     // ctx.moveTo(x_old, y_old)
-        //     ctx.lineTo(x, y)
-
-        //     // x_old = x
-        //     // y_old = y
-        // }//for i
-        // ctx.stroke()
-
-        // 底部的虚线
-        // ctx.strokeStyle = "black"
-        // ctx.setLineDash([0, 5])
-        // ctx.lineWidth = 2.5
-        // ctx.beginPath()
-        // ctx.moveTo(2, size.height - 4)
-        // ctx.lineTo(size.width - 2, size.height - 4)
-        // ctx.stroke()
     }//paint
 })//registerPaint
