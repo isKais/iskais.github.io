@@ -3,3 +3,11 @@ todo1: 整体基调,像素手绘风格, 尽量简单清晰
 库参考: roughJS
 https://segmentfault.com/a/1190000044277320
 https://github.com/rough-stuff/rough/wiki
+
+更新日记
+2025 6 29 计时器
+
+8.28 模块化
+<!-- 引入 Tailwind -->
+更改了全局颜色
+模块化

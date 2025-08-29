@@ -1,0 +1,10 @@
+/* 左右导航 */
+.rightbar {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+}
+
+.leftbar {
+    position: fixed;
+}
