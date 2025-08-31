@@ -8,12 +8,13 @@
     <title>DragonFly</title>
     <link rel="icon" type="image/png" href="./resource/icon.png">
 
+    <!-- 后面的样式会覆盖前面的样式 -->
     <!-- 全局css -->
     <link rel="stylesheet" href="./css/global.css">
-    <!-- 局部css -->
-    <link rel="stylesheet" href="./css/index_style.css">
     <!-- 文本的css -->
     <link rel="stylesheet" href="./css/text.css">
+    <!-- index页面特有css -->
+    <link rel="stylesheet" href="./css/index_style.css">
 
 </head>
 
@@ -21,41 +22,46 @@
 
 <body>
     <header>
-
+        <section>
+            <p>欢迎来到我的网站</p>
+            <p>这是一个简单的网站, 这是一段介绍词</p>
+            <p>占位文字, <span class="sketchy-underline">占位文字</span>, 占位文字, 占位文字, 占位文字, 占位文字, 占位文字</p>
+        </section>
     </header>
 
-    <div class="bar">
-        <div class="leftbar">
-            <!--显示在左边-->
-            <a class="box1" href="./index.html">主页</a>
-            <a class="box2" href="./pages/about.html" target="_blank">关于</a>
-            <a class="box3" href="./pages/content.html" target="_blank">内容</a>
-            <a class="box4" href="./404.html" target="_blank">404</a>
-            <a class="box5" href="./files/Easy Cat Timer/index.html" target="_blank">计时器</a>
+    <!-- 侧边栏 -->
+    <aside class="leftbar">
+        <a class="box1" href="./index.html">主页</a>
+        <a class="box2" href="./pages/about.html" target="_blank">关于</a>
+        <a class="box3" href="./pages/content.html" target="_blank">内容</a>
+        <a class="box4" href="./404.html" target="_blank">404</a>
+        <a class="box5" href="./files/Easy Cat Timer/index.html" target="_blank">计时器</a>
+    </aside>
+
+    <aside class="rightbar">
+        <span>搭建网站时可以随手取用的信息</span>
+        <h3>主要元素颜色</h3>
+        <div style="display: flex;flex-direction: column;box-shadow:0 8px 16px rgba(0,0,0,0.1)">
+            <div style="background:#001BB7;padding:1rem;color:#fff">#001BB7</div>
+            <div style="background:#0046FF;padding:1rem;color:#fff">#0046FF</div>
+            <div style="background:#3B82F6;padding:1rem;color:#fff">#3B82F6</div>
+            <div style="background:#FF8040;padding:1rem;color:#000">#FF8040</div>
+            <div style="background:#F7CE46;padding:1rem;color:#000">#F7CE46</div>
+            <div style="background:#E9E9E9;padding:1rem;color:#000">#E9E9E9</div>
         </div>
-        <div class="rightbar">
-            <!--显示在右边-->
-            <a href="#">⬆️</a>
-        </div>
-    </div>
+        <!-- 日志 -->
+        <div id="log-panel"></div>
+    </aside>
 
     <main>
         <section>
-            <h2>欢迎来到我的网站</h2>
-            <p>这是一个简单的网站, 这是一段介绍词</p>
-            <p>占位文字, 占位文字, 占位文字, 占位文字, 占位文字, 占位文字, 占位文字</p>
-        </section>
-
-        <section>
             <h1>我是谁?</h1>
-            <h1>About Me</h1>
-            <p>一只<span class="sketchy">龙</span>然后还需要写什么呢? 当然不需要什么, 这些只是无意义的占位文字.</p>
+            <p>一只<span class="sketchy-mark">龙</span>然后还需要写什么呢? 当然不需要什么, 这些只是无意义的占位文字.</p>
         </section>
 
         <section>
             <h2>这里是什么地方?</h2>
-            <h1>where is this place?</h1>
-            <div class="boxtest">
+            <div class="sketchy-box">
                 <p>一个展示板!一个笔记本!一个自留巢!</p>
             </div>
 
@@ -63,16 +69,10 @@
 
         <section>
             <h2>这里有什么内容?</h2>
-            <h1>what's the content?</h1>
             <div>
                 <p>这里什么内容都没有, 这里只是毛坯窝, 既没有住龙, 也没有装修.</p>
                 <p>有朝一日, 我发觉我收集的东西实在是太多了, 然后不能随身携带, 所有就基于GithubPaper搭建了一个网站, 让我的东西可以被我随时查阅, 这就是网站的由来. </p>
             </div>
-        </section>
-
-        <section>
-            <p>下面是一个参考示例, 我的网页绘画板, 虽然不知道画什么(但是有总比没有好!)</p>
-            <canvas id="canvas" width="200" height="100"></canvas>
         </section>
 
     </main>
@@ -81,18 +81,35 @@
         2025 My Website - Dragonfly<br>May all dragons fly free.
     </footer>
 
+    <div>
+        <img class="show-dragon" src="./resource/sshow.png" alt="">
+    </div>
+
+
+
 </body>
 
-<!--用于绘画的js-->
-<script src="./bundle/rough.js"></script>
+
 <script>
     if (CSS["paintWorklet"] !== undefined) {
         CSS.paintWorklet.addModule("./bundle/worklet-sketchy-background.js");
         CSS.paintWorklet.addModule("./bundle/worklet-rough-box.js");
+        CSS.paintWorklet.addModule("./bundle/worklet-sketchy-underline.js")
     }
-    // 绘画测试用例
-    let roughCanvas = rough.canvas(document.getElementById('canvas')); roughCanvas.line(60, 60, 190, 60);
-    roughCanvas.line(60, 60, 190, 60, { strokeWidth: 5 }); roughCanvas.rectangle(10, 10, 100, 100);
-    roughCanvas.rectangle(140, 10, 100, 100, { fill: 'red' }); </script>
+</script>
+
+<!-- 日志显示 -->
+<script>
+    const panel = document.getElementById('log-panel');
+    fetch('Todo.txt')
+        .then(res => res.text())
+        .then(text => {
+            panel.textContent = text;
+        });
+    // 页面加载完，滚动到底部
+    window.addEventListener('load', () => {
+        panel.scrollTop = panel.scrollHeight;
+    });
+</script>
 
 </html>

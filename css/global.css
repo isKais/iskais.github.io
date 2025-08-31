@@ -7,16 +7,8 @@
 
 body {
     font-family: 'PixelFont', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #E9E9E9;
     margin: auto;
-}
-
-main {
-    width: 50%;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 100px;
 }
 
 /* 脚标 */
@@ -30,19 +22,29 @@ footer {
 }
 
 /* 更好的高亮显示 */
-.sketchy {
+.sketchy-mark {
     background-image: paint(sketchyBackground);
     --lineWidth: 3;
-    --lineColor: rgba(247, 206, 70, 1);
+    --lineColor: #F7CE46;
     padding: 3px 2px;
     /* display: inline-block; */
 }
 
 /* 更好的边框 */
-.boxtest {
-    --rough-stroke: rgba(247, 206, 70, 1);
+.sketchy-box {
+    --rough-stroke: #F7CE46;
     --rough-stroke-width: 1.5px;
     --rough-roughness: 3;
     padding: 2.5em 3em;
     background-image: paint(roughBox);
+}
+
+/* 更好的下划线 */
+.sketchy-underline {
+    --lineColor: #F7CE46;
+    --lineNumber: 6;
+    --lineSpread: 12;
+    --lineWidth: 1.2;
+    background-image: paint(sketchyUnderline);
+    padding-bottom: 5px;
 }

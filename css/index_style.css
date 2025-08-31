@@ -1,10 +1,74 @@
-/* 左右导航 */
-.rightbar {
-    position: fixed;
-    bottom: 50px;
-    right: 0;
+/* index页面特有的样式 */
+/* 大body使用网格grid, 内部使用flex */
+
+body {
+    display: grid;
+    place-items: center;
+    /* gird模板 */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". header header ."
+        "leftbar text text rightbar";
+}
+
+header {
+    grid-area: header;
 }
 
 .leftbar {
+    grid-area: leftbar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rightbar {
+    grid-area: rightbar;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 均匀分布 */
+}
+
+main {
+    grid-area: text;
+}
+
+/* 左下角图标 */
+.show-dragon {
+    margin: 0;
+    box-shadow: none !important;
+    /* fixed 是固定于视口(不可滚动)
+    absolute 是固定于父元素(可以随着父元素滚动) */
     position: fixed;
+    bottom: 0;
+    width: 10vw;
+    left: 20px;
+    /* vw、vh 是视口单位，20vw 就是窗口宽度的 20%。 */
+}
+
+/* 日志系统显示 */
+#log-panel {
+    white-space: pre-wrap;
+    /* 保留换行和空格，自动换行 */
+    max-height: 100px;
+    overflow-y: auto;
+    /* 超过高度出现滚动条 */
+    margin-top: 100px;
+}
+
+/* 自定义滚动条 */
+#log-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+#log-panel::-webkit-scrollbar-thumb {
+    background: #FF8040;
+    border-radius: 4px;
+}
+
+#log-panel::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
 }

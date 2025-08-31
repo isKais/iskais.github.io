@@ -1,3 +1,5 @@
+/* 文本的样式 */
+
 /* 一级标题 <h1> */
 h1 {
     font-size: 2.25rem;
@@ -8,7 +10,7 @@ h1 {
     /* mt-6 */
     margin-bottom: 1rem;
     /* mb-4 */
-    color: #1d4ed8;
+    color: #001BB7;
     /* text-blue-700 */
 }
 
@@ -19,7 +21,7 @@ h2 {
     font-weight: 600;
     margin-top: 1.25rem;
     margin-bottom: 0.75rem;
-    color: #2563eb;
+    color: #0046FF;
 }
 
 /* 三级标题 <h3> */
@@ -28,7 +30,7 @@ h3 {
     font-weight: 500;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
-    color: #3b82f6;
+    color: #3B82F6;
 }
 
 /* 四级标题 <h4> */
