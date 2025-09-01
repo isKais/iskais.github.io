@@ -24,7 +24,7 @@ registerPaint('sketchyUnderline', class {
         //Stripes from start to finish - Originally based on the example by Una Kravets
         //From https://blog.logrocket.com/new-horizons-in-css-houdini-and-the-paint-api-8b307cf387bb
         const getRandomX = () => { return Math.random() * 10 }
-        const getRandomY = () => { return size.height -5 - Math.random()*spread }
+        const getRandomY = () => { return size.height - 5 - Math.random() * spread }
         for (let i = 0; i < numUnderlines; i++) {
             let x = getRandomX()
             let y = getRandomY()
@@ -33,11 +33,13 @@ registerPaint('sketchyUnderline', class {
             ctx.beginPath()
             ctx.moveTo(x, y)
 
-            let x2 = size.width - getRandomX() * 7
+            let x2 = size.width - getRandomX()
             let y2 = getRandomY()
 
-            let cx = size.width/2 + (Math.random() > 0.5 ? 1 : -1) * 0.15 * size.width
-            let cy = (y + y2)/2 - (Math.random() > 0.5 ? (Math.random() * 15 + 5) : -(Math.random() * 8))
+            // Math.random() 0 - 1随机数
+            // cx cy 贝塞尔曲线控制点
+            let cx = size.width / 2 + (Math.random() > 0.5 ? 1 : -1) * 0.15 * size.width
+            let cy = (y + y2) / 2 - (Math.random() > 0.5 ? (Math.random() * 5) : -(Math.random() * 8))
 
             ctx.quadraticCurveTo(cx, cy, x2, y2)
 

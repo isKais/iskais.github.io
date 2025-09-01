@@ -41,9 +41,9 @@ footer {
 
 /* 更好的下划线 */
 .sketchy-underline {
-    --lineColor: #F7CE46;
-    --lineNumber: 6;
-    --lineSpread: 12;
+    --lineColor: #FF8040;
+    --lineNumber: 3;
+    --lineSpread: -2;
     --lineWidth: 1.2;
     background-image: paint(sketchyUnderline);
     padding-bottom: 5px;

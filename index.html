@@ -22,11 +22,13 @@
 
 <body>
     <header>
+        <p>欢迎来到我的网站</p>
         <section>
-            <p>欢迎来到我的网站</p>
-            <p>这是一个简单的网站, 这是一段介绍词</p>
-            <p>占位文字, <span class="sketchy-underline">占位文字</span>, 占位文字, 占位文字, 占位文字, 占位文字, 占位文字</p>
+            <p>这是一个简单的网站, 也是我的浏览器主页. </p>
         </section>
+        <p class="sketchy-box" style="margin: 0;">正在修缮中, 当前阶段-
+            <span class="sketchy-underline">用爪子刨洞</span>
+        </p>
     </header>
 
     <!-- 侧边栏 -->
@@ -49,30 +51,36 @@
             <div style="background:#F7CE46;padding:1rem;color:#000">#F7CE46</div>
             <div style="background:#E9E9E9;padding:1rem;color:#000">#E9E9E9</div>
         </div>
+
         <!-- 日志 -->
-        <div id="log-panel"></div>
+        <div>
+            <h3>时间线</h3>
+            <div id="log-panel"></div>
+        </div>
     </aside>
 
     <main>
-        <section>
+
+        <toggle-section>
             <h1>我是谁?</h1>
-            <p>一只<span class="sketchy-mark">龙</span>然后还需要写什么呢? 当然不需要什么, 这些只是无意义的占位文字.</p>
-        </section>
+            <section>
+                <p>一只<span class="sketchy-mark">龙</span>然后还需要写什么呢? 唔, 就这样吧</p>
+                <h2>这里是什么地方?</h2>
+                <div class="sketchy-box">
+                    <p>一个展示板!一个笔记本!一个自留巢!</p>
+                </div>
+                <h2>这里有什么内容?</h2>
+                <div>
+                    <p>这里什么内容都没有, 这里只是毛坯窝, 既没有住龙, 也没有装修(那是之前, 现在正在开始装修)</p>
+                    <p>有朝一日, 我发觉我收集的东西实在是太多了, 然后不能随身携带, 就基于GithubPaper搭建了一个网站, 让我的东西可以被我随时查阅, 这就是网站的由来. </p>
+                    <p>再后来, 就像是每个暑假一样, 我总会做些有意义的事情, 去年暑假因为实习, 网站一直停滞到现在.</p>
+                </div>
+            </section>
+        </toggle-section>
+
 
         <section>
-            <h2>这里是什么地方?</h2>
-            <div class="sketchy-box">
-                <p>一个展示板!一个笔记本!一个自留巢!</p>
-            </div>
-
-        </section>
-
-        <section>
-            <h2>这里有什么内容?</h2>
-            <div>
-                <p>这里什么内容都没有, 这里只是毛坯窝, 既没有住龙, 也没有装修.</p>
-                <p>有朝一日, 我发觉我收集的东西实在是太多了, 然后不能随身携带, 所有就基于GithubPaper搭建了一个网站, 让我的东西可以被我随时查阅, 这就是网站的由来. </p>
-            </div>
+            <h1>要去哪里?</h1>
         </section>
 
     </main>
@@ -89,7 +97,7 @@
 
 </body>
 
-
+<script type="module" src="./component/toggle-section.js"></script>
 <script>
     if (CSS["paintWorklet"] !== undefined) {
         CSS.paintWorklet.addModule("./bundle/worklet-sketchy-background.js");
