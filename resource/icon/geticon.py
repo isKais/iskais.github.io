@@ -5,9 +5,12 @@ def fetch_favicon(domain: str, size: int = 128):
     """
     从 Google API 获取指定域名的 favicon
     """
-    url = f"https://{domain}/favicon.ico"
+    url = f"https://www.google.com/s2/favicons?sz={size}&domain={domain}"
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
     try:
-        response = requests.get(url, timeout=2)
+        response = requests.get(url, headers=headers, timeout=2)
         response.raise_for_status() # 请求失败会抛出异常
         return response.content
     except Exception as e:
@@ -28,9 +31,15 @@ def main():
         domains = [line.strip() for line in f if line.strip()]
 
     for domain in domains:
+        output_path = os.path.join(base_dir, f"{domain}.png")
+        
+        # 检查文件是否已存在
+        if os.path.exists(output_path):
+            print(f"[跳过] {domain}.png 已存在")
+            continue
+            
         favicon = fetch_favicon(domain)
         if favicon:
-            output_path = os.path.join(base_dir, f"{domain}.png")
             with open(output_path, "wb") as f:
                 f.write(favicon)
             print(f"[成功] 已保存 {domain}.png")

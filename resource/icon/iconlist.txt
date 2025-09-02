@@ -1,4 +1,4 @@
-openai.com
+chatgpt.com
 bilibili.com
 zhihu.com
-deepseek.com
+chat.deepseek.com

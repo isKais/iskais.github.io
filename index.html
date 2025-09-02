@@ -52,7 +52,7 @@
         </div>
 
         <!-- 日志 -->
-        <div>
+        <div style="display: none;">
             <h3>时间线</h3>
             <div id="log-panel"></div>
         </div>
@@ -83,11 +83,11 @@
         <section>
             <h1>要去哪里?</h1>
             <section>
-                <div class="web-index">
-                    <div class="web-show">
-                        <span>bilibili</span>
-                        <img class="web-icon" src="./resource/icon/bilibili.com.png" alt="">
-                    </div>
+                <div class="favorites-show">
+                    <favorites-web domain="bilibili.com"></favorites-web>
+                    <favorites-web domain="zhihu.com"></favorites-web>
+                    <favorites-web domain="chatgpt.com"></favorites-web>
+                    <favorites-web domain="chat.deepseek.com"></favorites-web>
                 </div>
             </section>
         </section>
@@ -107,6 +107,7 @@
 </body>
 
 <script type="module" src="./component/toggle-section.js"></script>
+<script type="module" src="./component/favorites-web.js"></script>
 <script>
     if (CSS["paintWorklet"] !== undefined) {
         CSS.paintWorklet.addModule("./bundle/worklet-sketchy-background.js");
@@ -115,7 +116,7 @@
     }
 </script>
 
-<!-- 日志显示 -->
+<!-- 日志显示: 当前隐藏中 -->
 <script>
     const panel = document.getElementById('log-panel');
     fetch('Todo.txt')

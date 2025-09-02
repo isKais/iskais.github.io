@@ -36,6 +36,7 @@ header {
 
 main {
     grid-area: text;
+    margin-bottom: 10vw;
 }
 
 /* 左下角图标 */
