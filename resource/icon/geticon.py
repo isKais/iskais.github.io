@@ -28,7 +28,16 @@ def main():
         return
 
     with open(input_file, "r", encoding="utf-8") as f:
-        domains = [line.strip() for line in f if line.strip()]
+        domains = []
+        for line in f:
+            line = line.strip()
+            # 跳过空行和注释行
+            if not line or line.startswith('#') or line.startswith('//'):
+                continue
+            # 提取可能存在的域名部分（排除中文等）
+            domain = line.split()[0]  # 取第一个单词
+            if '.' in domain:  # 简单验证
+                domains.append(domain)
 
     for domain in domains:
         output_path = os.path.join(base_dir, f"{domain}.png")

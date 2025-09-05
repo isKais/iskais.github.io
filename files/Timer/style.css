@@ -1,0 +1,158 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+}
+
+#show {
+    border: 1px solid black;
+    width: 20vw;
+}
+
+#other {
+    border: 1px solid black;
+    width: 20vw;
+}
+
+/* 外层自适应容器 */
+#timer {
+    width: 20vw;
+    height: 16vw;
+}
+
+.time {
+    /* 置中四件套, 绝对布局, 元素左上角定位中心, 元素移动自身到置中 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    font-size: 80px;
+    color: #3B82F6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* 舞台 - 固定设计稿尺寸 */
+#stage {
+    width: 512px;
+    /* 两只猫叠加区域的总宽度 */
+    height: 256px;
+    /* 舞台高度 */
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) scale(1);
+    overflow: hidden;
+    /* 超出部分直接隐藏 */
+    margin-top: auto;
+}
+
+.cat {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+}
+
+.cat img {
+    position: absolute;
+}
+
+/* ===== 黄色猫 ===== */
+#yellow-cat .cat-body {
+    top: 33px;
+    left: 20px;
+    width: 256px;
+}
+
+#yellow-cat .cat-closemouth {
+    top: 120px;
+    left: 65px;
+    width: 150px;
+    opacity: 0;
+}
+
+#yellow-cat .cat-openmouth {
+    top: 130px;
+    left: 100px;
+    width: 110px;
+}
+
+#yellow-cat .cat-hand {
+    top: 160px;
+    left: 80px;
+    width: 160px;
+}
+
+#yellow-cat .cat-rope {
+    top: 0;
+    left: 155px;
+    width: 10px;
+    opacity: 0;
+}
+
+#yellow-cat .cat-fish {
+    top: 155px;
+    left: 115px;
+    width: 80px;
+    opacity: 0;
+}
+
+/* ===== 黑色猫 ===== */
+#black-cat {
+    left: 256px;
+    top: 0;
+}
+
+#black-cat .cat-body {
+    top: 20px;
+    left: -20px;
+    width: 256px;
+}
+
+#black-cat .cat-closemouth {
+    top: 120px;
+    left: 60px;
+    width: 120px;
+    opacity: 0;
+}
+
+#black-cat .cat-openmouth {
+    top: 130px;
+    left: 60px;
+    width: 110px;
+}
+
+#black-cat .cat-rope {
+    top: 0;
+    left: 120px;
+    width: 6px;
+    opacity: 0;
+}
+
+#black-cat .cat-fish {
+    top: 155px;
+    left: 70px;
+    width: 80px;
+    opacity: 0;
+}
+
+/* 增加填充 */
+/* 有bug, 无法使用sketchy填充, 填充的区域会比background-color小一圈 */
+.sketchy-box-timer {
+    --rough-stroke-width: 1.5px;
+    --rough-roughness: 3;
+    --rough-fill: #FF8040;
+    --rough-stroke: #FF8040;
+    background-image: paint(roughBox);
+    /* background-color: blueviolet; */
+}
