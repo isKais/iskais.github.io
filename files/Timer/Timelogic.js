@@ -23,7 +23,10 @@ window.state = {
 
     // -- 简化的精确计时状态 --
     startTime: 0,           // 计时器“理论上”的开始时间戳
-    initialCountdownTime: 0 // 倒计时模式下的初始总秒数
+    initialCountdownTime: 0, // 倒计时模式下的初始总秒数
+
+    // 模式
+    clock: false,
 };
 
 
@@ -49,7 +52,7 @@ function startTimer() {
         }
         state.startTime = Date.now(); // 直接记录当前时间为开始时间
         state.isInit = false;
-        
+
     } else {
         // 从暂停中恢复
         let elapsedMs = 0;
@@ -165,7 +168,17 @@ resetBtn.onclick = function () {
 addBtn.onclick = function () {
     const container = document.getElementById('log');
     const newElement = document.createElement('p');
-    text = minutesElement.textContent + ':' + secondsElement.textContent
+    if (window.state.clock) {
+        text = '[时刻]' + minutesElement.textContent + ':' + secondsElement.textContent
+    } else {
+        if (window.state.isCountdown) {
+            text = '[倒计时]' + minutesElement.textContent + ':' + secondsElement.textContent
+        } else {
+            text = '[计时]' + minutesElement.textContent + ':' + secondsElement.textContent
+        }
+
+    }
+
     newElement.textContent = text;
     container.appendChild(newElement);
 }
