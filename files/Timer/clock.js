@@ -21,7 +21,7 @@ document.querySelector("#clock").onclick = function () {
             // 使用表盘的分钟显示小时, 使用秒钟显示分钟, 复用
             minutesElement.textContent = String(now.getHours()).padStart(2, "0");
             secondsElement.textContent = String(now.getMinutes()).padStart(2, "0");
-        }, 2000);
+        }, 1000);
         running = true;
     } else {
         window.state = timerData

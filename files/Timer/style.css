@@ -8,11 +8,13 @@ main {
 }
 
 #show {
-    border: 1px solid black;
+    box-sizing: border-box; 
+    /* CSS 的 width 指的是 内容区 (content box) 的宽度, 所以要特意指定包含边框!, 这样才能正确! */
     width: 20vw;
 }
 
 #other {
+    box-sizing: border-box;
     width: 20vw;
 }
 
@@ -93,9 +95,9 @@ main {
 }
 
 #yellow-cat .cat-rope {
-    top: 0;
-    left: 155px;
-    width: 10px;
+    top: -225px;
+    left: 145px;
+    width: 20px;
     opacity: 0;
 }
 
@@ -132,10 +134,10 @@ main {
 }
 
 #black-cat .cat-rope {
-    top: 0;
-    left: 120px;
-    width: 6px;
-    opacity: 0;
+    top: -232px;
+    left: 113px;
+    width: 12px;
+    opacity: 1;
 }
 
 #black-cat .cat-fish {
@@ -154,4 +156,47 @@ main {
     --rough-stroke: #FF8040;
     background-image: paint(roughBox);
     /* background-color: blueviolet; */
+}
+
+
+/* CSS */
+.button-55 {
+    align-self: center;
+    background-color: #E9E9E9;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'PixelFont';
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-color: #3B82F6;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-55:hover {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
+}
+
+.button-55:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }

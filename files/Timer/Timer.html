@@ -18,17 +18,17 @@
 
 <body>
     <main>
-        <div id="show">
+        <div id="show" class="sketchy-box">
             <p id="log">计时记录</p>
             <button id="add">记录当前</button>
             <button id="delete">删除末尾</button>
             <button id="clock">Clock</button>
         </div>
         <div id="timer" class="sketchy-box-timer">
-            <div id="control">
-                <button id="start">启动</button>
-                <button id="stop">停止</button>
-                <button id="reset">重置</button>
+            <div id="control" style="display: flex;">
+                <button id="start" class="button-55">启动</button>
+                <button id="stop" class="button-55">停止</button>
+                <button id="reset" class="button-55">重置</button>
             </div>
             <div class="time">
                 <div id="minutes" class="unit">00</div>
@@ -41,20 +41,24 @@
                     <img class="cat-closemouth" src="./asset/cat/YellowCat-CloseMouth.png">
                     <img class="cat-openmouth" src="./asset/cat/YellowCat-OpenMouth.png">
                     <img class="cat-hand" src="./asset/cat/YellowCat-Hand.png">
+                    <img class="cat-rope" src="./asset/cat/YellowCat-Rope.png">
                     <img class="cat-fish" src="./asset/cat/YellowCat-Fish.png">
                 </div>
                 <div class="cat" id="black-cat">
                     <img class="cat-body" src="./asset/cat/BlackCat-Body.png">
                     <img class="cat-closemouth" src="./asset/cat/BlackCat-CloseMouth.png">
                     <img class="cat-openmouth" src="./asset/cat/BlackCat-OpenMouth.png">
+                    <img class="cat-rope" src="./asset/cat/BlackCat-Rope.png">
                     <img class="cat-fish" src="./asset/cat/BlackCat-Fish.png">
 
                 </div>
             </div>
 
         </div>
-        <div id="other" class="sketchy-mark">
-            <span>tips: 没有任何鱼鱼和猫猫会受到伤害</span>
+        <div id="other" class="sketchy-box">
+            <p>tips:</p>
+            <p>不会有任何猫猫鱼鱼受到伤害</p>
+            <p id="noPlay">点击我静音~</p>
         </div>
     </main>
 </body>
@@ -84,5 +88,7 @@
 <script src="./Timelogic.js"></script>
 <!-- 甜点功能,显示当前时间 -->
 <script src="./clock.js"></script>
+<!-- 音效 -->
+<script src="./sounds.js"></script>
 
 </html>

@@ -45,7 +45,11 @@ function startTimer() {
         // 全新开始
         // 全新开始的时候进行正/倒计时判断
         state.isCountdown = state.timeInSeconds > 0;
+        // 一些开始时候的设置
         noSleep.enable();
+        exitAnimation(startBtn);    // 隐藏开始按钮
+        enterAnimation(stopBtn);
+        enterAnimation(resetBtn);
 
         if (state.isCountdown) {
             state.initialCountdownTime = state.timeInSeconds;
@@ -97,10 +101,13 @@ function resetTimer() {
 
     updateDisplay();
     stopBtn.textContent = "暂停";
+    enterAnimation(startBtn);
+    exitAnimation(stopBtn);
+    exitAnimation(resetBtn);
 }
 
 /**
- * @description 计时器的核心逻辑 (已更新)
+ * @description 计时器的核心逻辑 (已更新) 没有搞懂, 需要后面再看
  */
 function tick() {
     // 1. 计算总的真实流逝时间
@@ -115,6 +122,7 @@ function tick() {
 
         if (state.timeInSeconds < 0) {
             alert("倒计时结束！");
+            // playRandomSoundFromFiles(catComplete);
             resetTimer();
             return; // 重置后必须立即退出，防止后续代码出错
         }
@@ -124,6 +132,7 @@ function tick() {
         if (state.timeInSeconds > MAX_TIME_IN_SECONDS) {
             state.timeInSeconds = MAX_TIME_IN_SECONDS;
             stopTimer(); // 达到上限时暂停
+            // playRandomSoundFromFiles(catComplete);
             alert("已达到最大计时！");
         }
     }
@@ -144,7 +153,10 @@ function updateDisplay() {
 // --- 事件监听器绑定 ---
 
 // "开始"按钮点击事件
-startBtn.onclick = startTimer;
+startBtn.onclick = () => {
+    startTimer();
+
+};
 
 // "暂停/恢复"按钮点击事件
 stopBtn.onclick = function () {
@@ -209,6 +221,7 @@ class WheelController {
 
         // 获取当前数据
         this.#value = Number(this.#element.textContent);
+        playRandomSoundFromFiles(addNum);
 
         // 根据滚轮方向调整数值
         if (e.deltaY < 0) { // 向上滚动
@@ -245,3 +258,7 @@ function onTimeChange() {
 // 将 onTimeChange 函数作为回调传入
 new WheelController(minutesElement, 99, onTimeChange);
 new WheelController(secondsElement, 59, onTimeChange); // 秒的最大值设为59更符合习惯
+
+// 刚开始不需要暂停和重置按钮
+stopBtn.style.display = "none"
+resetBtn.style.display = "none"
