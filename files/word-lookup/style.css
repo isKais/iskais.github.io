@@ -1,0 +1,684 @@
+/* ============================================================
+   活点笔记本 — 易混词学习
+   纯 CSS + SVG filter 实现 sketchy 三件套, 全浏览器兼容
+   ============================================================ */
+
+@font-face {
+  font-family: 'Fusion Pixel';
+  src: url('../../fonts/fusion-pixel-12px-monospaced-zh_hans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Custom Properties (exactly per STYLE.md) ──────── */
+:root {
+  --blue-h1:    #001BB7;
+  --blue-h2:    #0046FF;
+  --blue-h3:    #3B82F6;
+  --orange:     #FF8040;
+  --yellow:     #F7CE46;
+  --paper:      #E9E9E9;
+  --text:       #1f2937;
+  --code-bg:    #111827;
+  --link:       #2563eb;
+  --gray-light: #d1d5db;
+  --gray-soft:  #f4f4f4;
+  --danger:     #b91c1c;
+
+  --font-pixel: 'Fusion Pixel', 'Courier New', monospace;
+  --font-mono:  'Courier New', monospace;
+}
+
+/* ── Reset ─────────────────────────────────────────── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-pixel);
+  color: var(--text);
+  background: var(--paper);
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ── Notebook Page ─────────────────────────────────── */
+.notebook-page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 24px 24px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ────────────────────────────────────────── */
+.page-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-family: var(--font-pixel);
+  font-size: 28px;
+  font-weight: normal;
+  color: var(--blue-h1);
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+/* ── Toolbar ───────────────────────────────────────── */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ================================================================
+   SKETCHY-BOX — 手绘边框
+   卡片: 多层内描边, 偏移量不对称 → 模拟重描的笔触重叠感
+   无 SVG filter, 无文字影响, 全浏览器一致
+   ================================================================ */
+
+.sketchy-card {
+  position: relative;
+  background: var(--gray-soft);
+  border: 2px solid var(--yellow);
+  padding: 22px 24px;
+  margin-bottom: 20px;
+  animation: card-reveal 0.7s ease-out both;
+}
+
+/* 第二层描边: 偏左上, 像手抖没对齐 */
+.sketchy-card::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  bottom: 1px;
+  left: 1px;
+  border: 1.5px solid rgba(247, 206, 70, 0.4);
+  pointer-events: none;
+  animation: stroke-breathe 4.8s ease-in-out infinite;
+}
+
+/* 第三层描边: 偏右下, 像又描了一次 */
+.sketchy-card::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 2px;
+  left: 3px;
+  border: 1px solid rgba(247, 206, 70, 0.25);
+  pointer-events: none;
+  animation: stroke-breathe 5.5s ease-in-out infinite 1.2s;
+}
+
+@keyframes stroke-breathe {
+  0%, 100% { opacity: 0.25; }
+  50%      { opacity: 0.5; }
+}
+
+/* ── Sketchy Buttons ───────────────────────────────── */
+.sketchy-btn {
+  position: relative;
+  padding: 7px 18px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-pixel);
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 0;
+}
+
+/* 按钮边框由 ::before 承载, 滤镜只作用于边框层, 文字完全不受影响 */
+.sketchy-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--yellow);
+  filter: url(#sketchy-light);
+  pointer-events: none;
+  transition: border-color 0.2s, border-width 0.2s;
+  z-index: -1;
+}
+
+.sketchy-btn:hover::before {
+  filter: url(#sketchy);
+  border-width: 2.5px;
+}
+
+.sketchy-btn:active::before {
+  border-width: 3px;
+  border-color: var(--orange);
+}
+
+/* primary */
+.sketchy-btn--primary::before {
+  border-color: var(--orange);
+}
+.sketchy-btn--primary:active::before {
+  border-width: 3.5px;
+}
+
+/* confirm */
+.sketchy-btn--confirm::before {
+  border-color: var(--yellow);
+}
+.sketchy-btn--confirm:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+.sketchy-btn--confirm:disabled::before {
+  border-color: var(--gray-light);
+  filter: none;
+}
+
+/* danger */
+.sketchy-btn--danger::before {
+  border-color: var(--danger);
+}
+.sketchy-btn--danger:hover {
+  color: var(--danger);
+}
+
+/* tiny + full */
+.sketchy-btn--tiny {
+  padding: 2px 10px;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.sketchy-btn--full {
+  width: 100%;
+  padding: 11px;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* ── Sketchy Inputs ────────────────────────────────── */
+.sketchy-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: var(--font-pixel);
+  font-size: 14px;
+  color: var(--text);
+  outline: none;
+  background: var(--gray-soft);
+  border: 1.5px solid var(--gray-light);
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.sketchy-input:focus {
+  border-color: var(--yellow);
+  background: var(--paper);
+}
+
+.sketchy-input::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.sketchy-textarea {
+  resize: vertical;
+  line-height: 1.7;
+  min-height: 52px;
+}
+
+/* ── Field Label ───────────────────────────────────── */
+.field-label {
+  font-family: var(--font-pixel);
+  font-size: 13px;
+  font-weight: normal;
+  color: var(--blue-h3);
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* ── Mean Display ──────────────────────────────────── */
+.mean-display {
+  background: var(--paper);
+  border: 1.5px solid var(--gray-light);
+  padding: 12px 14px;
+  min-height: 50px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text);
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.mean-display--sm {
+  min-height: 38px;
+  font-size: 12px;
+}
+
+.mean-display.loading {
+  opacity: 0.55;
+}
+
+.placeholder-text {
+  color: #9ca3af;
+  font-style: italic;
+  text-align: center;
+  display: block;
+}
+
+/* ── Input Grid ────────────────────────────────────── */
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.input-row .sketchy-input {
+  flex: 1;
+}
+
+/* ── Candidate Area ────────────────────────────────── */
+.candidate-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.candidate-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.candidate-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  min-height: 30px;
+  padding: 4px 0;
+}
+
+.candidate-list .candidate-item {
+  position: relative;
+  padding: 4px 14px;
+  background: var(--paper);
+  border: 1.5px solid var(--gray-light);
+  font-family: var(--font-pixel);
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  user-select: none;
+}
+
+.candidate-list .candidate-item:hover {
+  border-color: var(--orange);
+  background: #fff;
+}
+
+.candidate-list .candidate-item.selected {
+  border-color: var(--orange);
+  border-width: 2px;
+  background: #fff;
+}
+
+/* ── Table ─────────────────────────────────────────── */
+.table-card {
+  flex: 1;
+  min-height: 180px;
+}
+
+.table-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-family: var(--font-pixel);
+  font-size: 17px;
+  font-weight: normal;
+  color: var(--blue-h2);
+}
+
+.count-badge {
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  color: var(--text);
+  background: var(--paper);
+  padding: 3px 14px;
+  border: 1px solid var(--gray-light);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  flex: 1;
+}
+
+#wordTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+#wordTable th {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--orange);
+  color: var(--blue-h3);
+  font-weight: normal;
+  white-space: nowrap;
+  font-family: var(--font-pixel);
+}
+
+#wordTable td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--gray-light);
+  vertical-align: top;
+}
+
+#wordTable tbody tr:hover {
+  background: rgba(247, 206, 70, 0.12);
+}
+
+#wordTable .empty-row td {
+  text-align: center;
+  color: #9ca3af;
+  padding: 48px 14px;
+  font-style: italic;
+}
+
+.col-word {
+  font-weight: bold;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+
+.col-mean {
+  max-width: 240px;
+  word-break: break-word;
+}
+
+.col-action {
+  white-space: nowrap;
+}
+
+/* delete button */
+.btn-del {
+  position: relative;
+  padding: 3px 12px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-pixel);
+  font-size: 12px;
+  color: var(--danger);
+  cursor: pointer;
+  z-index: 0;
+}
+
+.btn-del::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--danger);
+  filter: url(#sketchy-light);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.btn-del:hover::before {
+  border-width: 2px;
+}
+
+/* ================================================================
+   SKETCHY-UNDERLINE — 手绘下划线
+   纯 CSS: text-decoration wavy (单线兜底)
+   ================================================================ */
+
+.sketchy-underline {
+  text-decoration: underline wavy #FF8040;
+  text-underline-offset: 3px;
+}
+
+/* ── Overlay ───────────────────────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.settings-panel {
+  position: relative;
+  background: var(--gray-soft);
+  border: 2.5px solid var(--yellow);
+  padding: 32px;
+  width: 500px;
+  max-width: 92vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  animation: card-reveal 0.5s ease-out both;
+}
+
+.settings-panel::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  bottom: 1px;
+  left: 3px;
+  border: 1.5px solid rgba(247, 206, 70, 0.35);
+  pointer-events: none;
+  animation: stroke-breathe 4.8s ease-in-out infinite;
+}
+
+.settings-panel::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  right: 3px;
+  bottom: 2px;
+  left: 1px;
+  border: 1px solid rgba(247, 206, 70, 0.2);
+  pointer-events: none;
+  animation: stroke-breathe 5.5s ease-in-out infinite 1.2s;
+}
+
+.settings-panel .section-title {
+  margin-bottom: 24px;
+}
+
+.setting-row {
+  margin-bottom: 18px;
+}
+
+.setting-hint {
+  font-weight: normal;
+  color: #9ca3af;
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+.setting-hint code {
+  background: var(--paper);
+  padding: 1px 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.settings-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── Toast ─────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--code-bg);
+  color: #fff;
+  padding: 10px 26px;
+  font-family: var(--font-pixel);
+  font-size: 13px;
+  z-index: 300;
+  transition: opacity 0.35s, transform 0.35s;
+  border: 1.5px solid var(--yellow);
+}
+
+.toast.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(12px);
+  pointer-events: none;
+}
+
+.toast.error {
+  border-color: var(--danger);
+  background: #1f1111;
+}
+
+.toast.success {
+  border-color: var(--yellow);
+}
+
+/* ================================================================
+   SKETCHY-MARK — 手绘高亮
+   涂抹感: ::before 伪元素 + blur 软边 + SVG 纹理 + 透明度脉冲
+   像荧光笔刚涂上去, 边界模糊不齐, 墨水深浅不一
+   ================================================================ */
+
+.sketchy-mark {
+  position: relative;
+  display: inline;
+}
+
+.sketchy-mark::before {
+  content: '';
+  position: absolute;
+  inset: -1px -3px;
+  background: rgba(247, 206, 70, 0.55);
+  filter: blur(2.5px);
+  z-index: -1;
+  animation: smudge-pulse 3s ease-in-out infinite;
+}
+
+/* 第二层: 更浅更宽, 模拟墨水洇开的不均匀边缘 */
+.sketchy-mark::after {
+  content: '';
+  position: absolute;
+  inset: -2px -6px;
+  background: rgba(247, 206, 70, 0.2);
+  filter: blur(5px);
+  z-index: -2;
+  animation: smudge-pulse 3.5s ease-in-out infinite 0.5s;
+}
+
+@keyframes smudge-pulse {
+  0%, 100% { opacity: 0.8; }
+  50%      { opacity: 1; }
+}
+
+/* ── Footer ────────────────────────────────────────── */
+.page-footer {
+  text-align: center;
+  padding: 28px 0 16px;
+  margin-top: auto;
+}
+
+.annotation {
+  font-family: var(--font-pixel);
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* ── Animations ────────────────────────────────────── */
+@keyframes card-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Responsive ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .notebook-page {
+    padding: 24px 14px 16px;
+  }
+
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+
+  .sketchy-card {
+    padding: 16px;
+  }
+
+  .settings-panel {
+    padding: 22px;
+  }
+
+  #wordTable th,
+  #wordTable td {
+    padding: 8px 6px;
+    font-size: 11px;
+  }
+
+  .toolbar {
+    gap: 6px;
+  }
+
+  .sketchy-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* ── Reduced Motion ────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .sketchy-card,
+  .settings-panel,
+  .sketchy-mark {
+    animation: none !important;
+  }
+}
+

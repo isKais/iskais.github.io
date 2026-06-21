@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>易混词学习 — 活点笔记本</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <defs>
+    <filter id="sketchy" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="42" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="sketchy-light" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="sketchy-subtle" x="-2%" y="-2%" width="104%" height="104%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="13" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+</svg>
+
+<div class="notebook-page">
+
+  <header class="page-header">
+    <h1 class="page-title">易混词学习</h1>
+  </header>
+
+  <nav class="toolbar">
+    <button id="btnImport" class="sketchy-btn">导入 CSV</button>
+    <button id="btnExport" class="sketchy-btn">导出 CSV</button>
+    <button id="btnClearAll" class="sketchy-btn sketchy-btn--danger">清除全部</button>
+    <button id="btnSettings" class="sketchy-btn" title="设置">&#9881;</button>
+    <input type="file" id="fileInput" accept=".csv" hidden>
+  </nav>
+
+  <main class="main-content">
+
+    <div class="input-grid">
+      <section class="sketchy-card" style="animation-delay:0.05s">
+        <label class="field-label" for="currentWordInput">当前单词</label>
+        <input type="text" id="currentWordInput" class="sketchy-input" placeholder="输入英语单词..." autocomplete="off">
+        <div id="currentMean" class="mean-display">
+          <span class="placeholder-text">输入单词后自动查词</span>
+        </div>
+      </section>
+
+      <section class="sketchy-card" style="animation-delay:0.15s">
+        <label class="field-label" for="confuseMeaningInput">易混意思</label>
+        <div class="input-row">
+          <input type="text" id="confuseMeaningInput" class="sketchy-input" placeholder="输入易混淆的中文意思..." autocomplete="off">
+          <button id="btnGuess" class="sketchy-btn sketchy-btn--primary">猜词</button>
+        </div>
+
+        <div class="candidate-area">
+          <div class="candidate-header">
+            <span class="field-label">候选词</span>
+            <button id="btnManualAdd" class="sketchy-btn sketchy-btn--tiny" title="手动添加候选词">+</button>
+          </div>
+          <ul id="candidateList" class="candidate-list"></ul>
+          <div id="candidateMean" class="mean-display mean-display--sm">
+            <span class="placeholder-text">选一个词，看看它是什么意思</span>
+          </div>
+          <button id="btnConfirm" class="sketchy-btn sketchy-btn--confirm sketchy-btn--full" disabled>确认保存</button>
+        </div>
+      </section>
+    </div>
+
+    <section class="sketchy-card table-card" style="animation-delay:0.25s">
+      <div class="table-top">
+        <h2 class="section-title">已保存词对</h2>
+        <span id="countLabel" class="count-badge">0 对</span>
+      </div>
+      <div class="table-wrap">
+        <table id="wordTable">
+          <thead>
+            <tr>
+              <th>当前单词</th>
+              <th>释义</th>
+              <th>易混词</th>
+              <th>释义</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <tr class="empty-row">
+              <td colspan="5">暂无数据 —— 龙还没开始刨呢</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p class="annotation">
+      <span class="sketchy-mark">先把爪子搁键盘上。打字也好，刨土也好，动起来再说。</span>
+    </p>
+  </footer>
+
+</div>
+
+<div id="settingsOverlay" class="overlay hidden">
+  <div class="sketchy-card settings-panel">
+    <h2 class="section-title">设置</h2>
+
+    <div class="setting-row">
+      <label class="field-label" for="apiKeyInput">API Key</label>
+      <input type="password" id="apiKeyInput" class="sketchy-input" placeholder="sk-...">
+    </div>
+
+    <div class="setting-row">
+      <label class="field-label" for="apiUrlInput">API URL</label>
+      <input type="text" id="apiUrlInput" class="sketchy-input" placeholder="https://api.deepseek.com/chat/completions">
+    </div>
+
+    <div class="setting-row">
+      <label class="field-label" for="modelInput">Model</label>
+      <input type="text" id="modelInput" class="sketchy-input" placeholder="deepseek-chat">
+    </div>
+
+    <div class="setting-row">
+      <label class="field-label" for="systemPromptInput">System Prompt</label>
+      <textarea id="systemPromptInput" class="sketchy-input sketchy-textarea" rows="2" placeholder="You are a helpful assistant."></textarea>
+    </div>
+
+    <div class="setting-row">
+      <label class="field-label" for="promptTemplateInput">
+        Prompt 模板
+        <span class="setting-hint">占位符: <code>{word}</code> <code>{meaning}</code></span>
+      </label>
+      <textarea id="promptTemplateInput" class="sketchy-input sketchy-textarea" rows="3"></textarea>
+    </div>
+
+    <div class="settings-actions">
+      <button id="btnSaveSettings" class="sketchy-btn sketchy-btn--primary">保存设置</button>
+      <button id="btnLoadSample" class="sketchy-btn">加载示例数据</button>
+      <button id="btnCloseSettings" class="sketchy-btn">关闭</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="data/tld_dict.js"></script>
+<script src="app.js"></script>
+<script src="bundle/load-worklets.js"></script>
+</body>
+</html>
